@@ -1,0 +1,10 @@
+html[data-theme='dark'] {
+    --background: #181818;
+    --text: #d8d8d8;
+    /* ... */
+  }
+  html[data-theme='light'] {
+    --background: #fff;
+    --text: #222;
+    /* ... */
+  }
