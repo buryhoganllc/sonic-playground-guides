@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 <head>
   <meta charset="utf-8">
-  <title>{{ page.title }} - {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% include head.html %}
+  <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
+
+  <!-- Theme & Layout CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/theme-toggle.css' | relative_url }}">
 </head>
 <body>
-  {% include nav.html %}
-  <main>
+  <header class="site-header">
+    {% include header.html %}
+  </header>
+
+  <main class="site-main">
     {{ content }}
   </main>
-  {% include footer.html %}
-  <script src="/assets/js/theme-toggle.js"></script>
+
+  <footer class="site-footer">
+    <hr>
+    <p>&copy; {{ site.time | date: "%Y" }} Bury, Hogan &amp; Associates LLC. All rights reserved.</p>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌓 Theme</button>
+  </footer>
+
+  <!-- Theme Toggle JS -->
+  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
 </body>
 </html>
