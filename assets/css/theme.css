@@ -1,5 +1,8 @@
-/* theme.css – global layout & typography */
+/* ===================================================== */
+/* theme.css – Global resets, typography, footer, toggle */
+/* ===================================================== */
 
+/* Global Reset & Box Model */
 *,
 *::before,
 *::after {
@@ -36,6 +39,7 @@ a:hover {
   border-top: 1px solid var(--border);
   box-shadow: var(--shadow);
   position: relative; /* container for absolute docking */
+  z-index: 1; /* ensures footer content layers cleanly */
 }
 
 .site-footer hr {
@@ -51,17 +55,23 @@ a:hover {
 /* ===================================== */
 #theme-toggle {
   margin: 0;
-  position: fixed;        /* default float */
+  position: fixed;        /* default floating state */
   bottom: 1rem;
   right: 1rem;
-  display: inline-block;  /* avoids unwanted block height */
-  z-index: 1000;
+  display: inline-block;  /* avoids full-width block quirks */
+  z-index: 2147483647;    /* max practical value to stay on top */
+  pointer-events: auto;   /* ensure clickability even over overlays */
 
-  /* Smooth transition when docking/floating */
+  /* Smooth transition between float & dock */
   transition:
     bottom 0.25s ease,
     right 0.25s ease,
     transform 0.25s ease;
+}
+
+/* Docked state — JS will set absolute positioning inside footer */
+.site-footer #theme-toggle {
+  position: absolute;
 }
 
 /* Optional: subtle hover lift */
@@ -70,7 +80,15 @@ a:hover {
 }
 
 /* ========================= */
-/* Additional global resets  */
+/* Pointer-event hardening   */
 /* ========================= */
-/* The button’s visual style (colors, borders, etc.)
-   is handled in theme-toggle.css */
+.site-footer::before,
+.site-footer::after {
+  pointer-events: none; /* avoids invisible blockers */
+}
+
+/* ========================= */
+/* Notes                     */
+/* ========================= */
+/* All theme-specific button colors, borders, and dark/light
+   variations should remain in theme-toggle.css */
