@@ -317,3 +317,31 @@ th, td {
 thead th {
   background: var(--card);
 }
+
+/* ---------- Forms ---------- */
+input, textarea, select {
+  background: var(--card);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+  padding: .5rem .75rem;
+  width: 100%;
+}
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid color-mix(in oklab, var(--accent) 45%, transparent);
+  outline-offset: 2px;
+}
+
+/* ---------- Cards / panels ---------- */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: .75rem;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+/* ---------- Utilities ---------- */
+.hidden { display: none !important; }
+.muted { color: var(--muted-fg); }
+.center { text-align: center; }
