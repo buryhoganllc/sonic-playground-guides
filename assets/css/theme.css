@@ -43,4 +43,13 @@ a:hover {
   margin: 0.5rem 0;
 }
 
+.site-footer {
+  position: relative; /* for absolute docking */
+}
+
+#theme-toggle {
+  margin: 0;
+  z-index: 1000;
+}
+
 /* The button is styled in theme-toggle.css */
