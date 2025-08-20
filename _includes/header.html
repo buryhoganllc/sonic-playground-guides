@@ -18,13 +18,12 @@
           const savedTheme = localStorage.getItem('theme');
           if (savedTheme) {
             document.documentElement.setAttribute('data-theme', savedTheme);
+            document.documentElement.style.colorScheme = savedTheme;
           }
-        } catch (e) {
-          // Ignore if storage is unavailable
-        }
+        } catch (e) {}
       })();
     </script>
-  
+      
     <!-- Main Styles -->
     <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
   
