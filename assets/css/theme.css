@@ -1,0 +1,26 @@
+:root {
+    --background: #ffffff;
+    --text: #222222;
+    --link: #007bff;
+    --code-bg: #f7f7f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #181818;
+      --text: #d8d8d8;
+      --link: #90caf9;
+      --code-bg: #252525;
+    }
+  }
+  /* Usage */
+  body {
+    background: var(--background);
+    color: var(--text);
+  }
+  a {
+    color: var(--link);
+  }
+  pre, code {
+    background: var(--code-bg);
+  }
+  
