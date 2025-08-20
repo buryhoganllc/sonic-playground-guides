@@ -5,23 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
 
+  <!-- Hint to browsers about supported color schemes -->
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Apply saved theme BEFORE styles load to prevent flash -->
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+          document.documentElement.style.colorScheme = savedTheme;
+        }
+      } catch (e) {
+        // Ignore if storage is unavailable
+      }
+    })();
+  </script>
+
   <!-- Theme & Layout CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" role="banner">
     {% include header.html %}
   </header>
 
-  <main class="site-main">
+  <main class="site-main" role="main">
     {{ content }}
   </main>
 
-  <footer class="site-footer">
-    <hr>
-    <p>&copy; {{ site.time | date: "%Y" }} Bury, Hogan &amp; Associates LLC. All rights reserved.</p>
-    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌓 Theme</button>
-  </footer>
+  {% include footer.html %}
 
   <!-- Theme Toggle JS -->
   <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
