@@ -1,9 +1,23 @@
-title: "Sonic Playground Operating Guides"
-remote_theme: jekyll/minima
+title: "My Project Documentation"
+description: "A documentation hub for my projects."
+remote_theme: jekyll/minima                    # or another remote theme
 plugins:
   - jekyll-remote-theme
+  - jekyll-relative-links                      # If using Markdown relative links
+  - jekyll-seo-tag                             # (optional)
 minima:
   skin: auto
+
+# Mark all pages to use Markdown and not posts
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      permalink: "/:path/:basename:output_ext"
+
+# Enable Markdown processor and syntax highlighter
 markdown: kramdown
 highlighter: rouge
 kramdown:
@@ -11,3 +25,17 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     css_class: 'highlight'
+    guess_lang: false
+
+# Relative links for ./about.md → /about.html etc.
+relative_links:
+  enabled: true
+  collections: true
+
+# Custom collections (if needed)
+# collections:
+#   projects:
+#     output: true
+#     permalink: /projects/:name/
+
+# Theme overrides, assets, etc.
