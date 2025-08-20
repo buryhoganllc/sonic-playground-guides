@@ -1,4 +1,4 @@
-/* theme.css - global layout & typography */
+/* theme.css – global layout & typography */
 
 *,
 *::before,
@@ -6,7 +6,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -25,14 +26,14 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Footer */
+/* Footer – consolidated */
 .site-footer {
   margin: 0;
   padding: 1rem;
   background: var(--card);
   border-top: 1px solid var(--border);
   box-shadow: var(--shadow);
-  position: relative; /* contextual container for any absolute children */
+  position: relative; /* container for absolute docking */
 }
 
 .site-footer hr {
@@ -43,13 +44,14 @@ a:hover {
   margin: 0.5rem 0;
 }
 
-.site-footer {
-  position: relative; /* for absolute docking */
-}
-
+/* Theme toggle button – safe defaults before JS runs */
 #theme-toggle {
   margin: 0;
   z-index: 1000;
+  position: fixed;  /* default float */
+  bottom: 1rem;
+  right: 1rem;
+  display: inline-block; /* avoid block-level height issues */
 }
 
-/* The button is styled in theme-toggle.css */
+/* Button-specific styling is still handled in theme-toggle.css */
