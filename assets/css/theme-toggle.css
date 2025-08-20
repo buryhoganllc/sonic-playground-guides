@@ -315,4 +315,5 @@ th, td {
   text-align: left;
 }
 thead th {
-  background: var
+  background: var(--card);
+}
