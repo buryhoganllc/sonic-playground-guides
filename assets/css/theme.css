@@ -95,3 +95,17 @@ a:hover {
 /* Visual styles for button  */
 /* ========================= */
 /* Keep actual colors/borders/themes in theme-toggle.css */
+
+/* Base background + text colors driven by theme tokens */
+html, body {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+/* Links */
+a {
+  color: var(--link);
+}
+a:hover, a:focus {
+  color: var(--link-hover);
+}
