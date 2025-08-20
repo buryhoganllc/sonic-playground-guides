@@ -1,8 +1,8 @@
-/* ===================================================== */
-/* theme.css – Global resets, typography, footer, toggle */
-/* ===================================================== */
+/* ========================================================= */
+/* theme.css – Global resets, typography, theming, footer   */
+/* ========================================================= */
 
-/* Global Reset & Box Model */
+/* ---------- Reset & Box Model ---------- */
 *,
 *::before,
 *::after {
@@ -16,96 +16,190 @@ body {
   height: 100%;
 }
 
-body {
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+/* ---------- Light tokens (default) ---------- */
+:root {
+  /* App */
+  --bg: #ffffff;
+  --fg: #0f172a;
+  --muted-fg: #475569;
+  --border: #e2e8f0;
+  --card: #f8fafc;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .06),
+            0 4px 12px rgba(0, 0, 0, .04);
+
+  /* Accent */
+  --accent: #2563eb;
+  --accent-contrast: #ffffff;
+
+  /* Links */
+  --link: #2563eb;
+  --link-hover: #1e40af;
+
+  /* Code */
+  --code-bg: #f6f8fa;
+  --code-inline-bg: #f3f4f6;
+  --code-fg: #24292e;
+
+  /* Theme button (light) */
+  --button-bg: #f5f5f5;
+  --button-hover-bg: #e5e5e5;
+  --button-text: #222;
+  --button-border: #bbb;
+}
+
+/* ---------- Dark tokens (manual override) ---------- */
+html[data-theme="dark"] {
+  --bg: #0b1220;
+  --fg: #e5e7eb;
+  --muted-fg: #9aa4b2;
+  --border: #1f2937;
+  --card: #0f172a;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .5),
+            0 8px 24px rgba(0, 0, 0, .35);
+
+  --accent: #60a5fa;
+  --accent-contrast: #0b1220;
+
+  --link: #93c5fd;
+  --link-hover: #60a5fa;
+
+  --code-bg: #0d1117;
+  --code-inline-bg: #111827;
+  --code-fg: #c9d1d9;
+
+  --button-bg: #333;
+  --button-hover-bg: #444;
+  --button-text: #f5f5f5;
+  --button-border: #555;
+}
+
+/* ---------- Respect system preference if no manual choice ---------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --bg: #0b1220;
+    --fg: #e5e7eb;
+    --muted-fg: #9aa4b2;
+    --border: #1f2937;
+    --card: #0f172a;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .5),
+              0 8px 24px rgba(0, 0, 0, .35);
+
+    --accent: #60a5fa;
+    --accent-contrast: #0b1220;
+
+    --link: #93c5fd;
+    --link-hover: #60a5fa;
+
+    --code-bg: #0d1117;
+    --code-inline-bg: #111827;
+    --code-fg: #c9d1d9;
+
+    --button-bg: #333;
+    --button-hover-bg: #444;
+    --button-text: #f5f5f5;
+    --button-border: #555;
+  }
+}
+
+/* ---------- Base application ---------- */
+html, body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, Inter, Helvetica, Arial, sans-serif;
   line-height: 1.6;
 }
 
 a {
   text-decoration: none;
+  color: var(--link);
 }
-
-a:hover {
+a:hover, a:focus {
   text-decoration: underline;
+  color: var(--link-hover);
 }
 
-/* ========================= */
-/* Footer – consolidated     */
-/* ========================= */
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+code {
+  background: var(--code-inline-bg);
+  color: var(--code-fg);
+}
+pre, .highlight {
+  background: var(--code-bg);
+  color: var(--code-fg);
+  border: 1px solid var(--border);
+}
+
+/* ---------- Footer ---------- */
 .site-footer {
   margin: 0;
   padding: 1rem;
   background: var(--card);
   border-top: 1px solid var(--border);
   box-shadow: var(--shadow);
-  position: relative; /* container for absolute docking */
-  z-index: 1;          /* ensures footer content layers cleanly */
+  position: relative;
+  z-index: 1;
 }
-
 .site-footer hr {
   margin: 0 0 0.5rem;
 }
-
 .site-footer p {
   margin: 0.5rem 0;
 }
 
-/* ================================= */
-/* Theme toggle – class‑driven states*/
-/* ================================= */
+/* Avoid invisible blockers */
+.site-footer::before,
+.site-footer::after {
+  pointer-events: none;
+}
+
+/* ---------- Theme toggle button ---------- */
 #theme-toggle {
   margin: 0;
-  display: inline-block; /* prevents full-width stretching */
-  z-index: 2147483647;    /* max practical value to stay on top */
-  pointer-events: auto;   /* ensure clickability even over overlays */
+  display: inline-block;
+  cursor: pointer;
+  z-index: 2147483647;
+  pointer-events: auto;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid var(--button-border);
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1;
+  user-select: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
   transition:
     bottom 0.25s ease,
     right 0.25s ease,
     transform 0.25s ease;
 }
 
-/* Floating (default) */
 #theme-toggle.floating {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
 }
 
-/* Docked inside footer */
 #theme-toggle.docked {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
 }
 
-/* Optional: subtle hover lift */
-#theme-toggle:hover {
+#theme-toggle:hover,
+#theme-toggle:focus {
+  background: var(--button-hover-bg);
+  outline: none;
   transform: scale(1.05);
 }
 
-/* ========================= */
-/* Pointer-event hardening   */
-/* ========================= */
-.site-footer::before,
-.site-footer::after {
-  pointer-events: none; /* avoids invisible blockers */
-}
-
-/* ========================= */
-/* Visual styles for button  */
-/* ========================= */
-/* Keep actual colors/borders/themes in theme-toggle.css */
-
-/* Base background + text colors driven by theme tokens */
-html, body {
-  background-color: var(--bg);
-  color: var(--fg);
-}
-
-/* Links */
-a {
-  color: var(--link);
-}
-a:hover, a:focus {
-  color: var(--link-hover);
+#theme-toggle:active {
+  transform: scale(0.97);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }

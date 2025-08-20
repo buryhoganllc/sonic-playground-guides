@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const themeToggle = document.getElementById("theme-toggle");
   const footer = document.querySelector(".site-footer");
 
   // ===== THEME SWITCHING =====
