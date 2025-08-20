@@ -1,43 +1,97 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const themeToggle = document.getElementById("theme-toggle");
-  const footer = document.querySelector(".site-footer");
+/* ===================================================== */
+/* theme.css – Global resets, typography, footer, toggle */
+/* ===================================================== */
 
-  // ===== THEME SWITCHING =====
-  themeToggle.addEventListener("click", function () {
-    const html = document.documentElement;
-    let theme = html.getAttribute("data-theme");
-    theme = theme === "dark" ? "light" : "dark";
-    html.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  });
+/* Global Reset & Box Model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  // Restore saved theme
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme) {
-    document.documentElement.setAttribute("data-theme", savedTheme);
-  }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
-  // ===== FLOAT / DOCK LOGIC =====
-  function updateTogglePosition() {
-    if (!themeToggle || !footer) return;
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
 
-    const footerRect = footer.getBoundingClientRect();
-    const viewportHeight = window.innerHeight;
+a {
+  text-decoration: none;
+}
 
-    if (footerRect.top < viewportHeight - themeToggle.offsetHeight - 16) {
-      // Footer in view → docked
-      themeToggle.classList.remove("floating");
-      themeToggle.classList.add("docked");
-    } else {
-      // Footer not in view → floating
-      themeToggle.classList.remove("docked");
-      themeToggle.classList.add("floating");
-    }
-  }
+a:hover {
+  text-decoration: underline;
+}
 
-  window.addEventListener("scroll", updateTogglePosition);
-  window.addEventListener("resize", updateTogglePosition);
+/* ========================= */
+/* Footer – consolidated     */
+/* ========================= */
+.site-footer {
+  margin: 0;
+  padding: 1rem;
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  position: relative; /* container for absolute docking */
+  z-index: 1;          /* ensures footer content layers cleanly */
+}
 
-  // Initial check
-  updateTogglePosition();
-});
+.site-footer hr {
+  margin: 0 0 0.5rem;
+}
+
+.site-footer p {
+  margin: 0.5rem 0;
+}
+
+/* ================================= */
+/* Theme toggle – class‑driven states*/
+/* ================================= */
+#theme-toggle {
+  margin: 0;
+  display: inline-block; /* prevents full-width stretching */
+  z-index: 2147483647;    /* max practical value to stay on top */
+  pointer-events: auto;   /* ensure clickability even over overlays */
+  transition:
+    bottom 0.25s ease,
+    right 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Floating (default) */
+#theme-toggle.floating {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+/* Docked inside footer */
+#theme-toggle.docked {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+/* Optional: subtle hover lift */
+#theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+/* ========================= */
+/* Pointer-event hardening   */
+/* ========================= */
+.site-footer::before,
+.site-footer::after {
+  pointer-events: none; /* avoids invisible blockers */
+}
+
+/* ========================= */
+/* Visual styles for button  */
+/* ========================= */
+/* Keep actual colors/borders/themes in theme-toggle.css */
