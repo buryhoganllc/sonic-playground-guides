@@ -1,5 +1,5 @@
-title: "My Project Documentation"
-description: "A documentation hub for my projects."
+title: "Sonic Playground Documentation"
+description: "Operating guides for Sonic Playground interactive exhibits."
 remote_theme: jekyll/minima                    # or another remote theme
 plugins:
   - jekyll-remote-theme
