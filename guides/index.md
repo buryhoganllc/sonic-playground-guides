@@ -4,7 +4,7 @@ layout: default
 permalink: /guides/
 ---
 
-## Opearting Guides
+## Operating Guides
 
 ### Electric Forest
 
