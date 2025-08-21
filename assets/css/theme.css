@@ -165,20 +165,22 @@ pre, .highlight {
   border: 1px solid var(--border);
 }
 
-/* Markdown tables */
-.markdown-body table {
+/* ---------- Markdown tables ---------- */
+.markdown-body table,
+.site-main table {
   border-collapse: collapse;
   width: 100%;
   margin: 1rem 0;
   font-size: 0.95rem;
 }
 
-.markdown-body thead {
+.markdown-body thead,
+.site-main thead {
   background-color: var(--card);
 }
 
-.markdown-body th,
-.markdown-body td {
+.markdown-body th, .markdown-body td,
+.site-main th, .site-main td {
   border: 1px solid var(--border);
   padding: 0.5rem 0.75rem;
   vertical-align: top;
@@ -187,34 +189,37 @@ pre, .highlight {
 
 /* Honor Markdown's :---:, ---:, :---: alignment syntax */
 .markdown-body th[style*="text-align:center"],
-.markdown-body td[style*="text-align:center"] {
+.markdown-body td[style*="text-align:center"],
+.site-main th[style*="text-align:center"],
+.site-main td[style*="text-align:center"] {
   text-align: center;
 }
 .markdown-body th[style*="text-align:right"],
-.markdown-body td[style*="text-align:right"] {
+.markdown-body td[style*="text-align:right"],
+.site-main th[style*="text-align:right"],
+.site-main td[style*="text-align:right"] {
   text-align: right;
 }
 
-/* Zebra striping for readability */
-.markdown-body tbody tr:nth-child(odd) {
-  background-color: var(--card);
-}
-.markdown-body tbody tr:nth-child(even) {
-  background-color: var(--bg);
-}
+/* Zebra striping */
+.markdown-body tbody tr:nth-child(odd),
+.site-main tbody tr:nth-child(odd) { background-color: var(--card); }
+.markdown-body tbody tr:nth-child(even),
+.site-main tbody tr:nth-child(even) { background-color: var(--bg); }
 
 /* Header emphasis */
-.markdown-body th {
+.markdown-body th,
+.site-main th {
   font-weight: 600;
   color: var(--fg);
 }
 
-/* Horizontal scroll wrapper */
+/* Responsive scroll container */
 .table-wrapper {
   overflow-x: auto;
 }
 .table-wrapper table {
-  min-width: 600px; /* adjust to desired min column width total */
+  min-width: 600px; /* adjust as needed */
 }
 
 /* ---------- Navigation ---------- */
@@ -283,33 +288,5 @@ pre, .highlight {
   font-size: 0.9rem;
   line-height: 1;
   user-select: none;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-  transition:
-    bottom 0.25s ease,
-    right 0.25s ease,
-    transform 0.25s ease;
-}
-
-#theme-toggle.floating {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-}
-
-#theme-toggle.docked {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-}
-
-#theme-toggle:hover,
-#theme-toggle:focus {
-  background: var(--button-hover-bg);
-  outline: none;
-  transform: scale(1.05);
-}
-
-#theme-toggle:active {
-  transform: scale(0.97);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-}
+  box
+  
