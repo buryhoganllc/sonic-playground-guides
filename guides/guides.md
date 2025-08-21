@@ -6,5 +6,5 @@ permalink: /guides/
 
 ## Operating Guides
 
-- [Electric Forest operating guide](electric-forest)
-- [Intuiface systems operating guide](intuiface)
+- [Electric Forest operating guide](/guides/electric-forest/)
+- [Intuiface systems operating guide](/guides/intuiface/)
