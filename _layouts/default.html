@@ -4,8 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
-
-  <!-- Hint to browsers about supported color schemes -->
   <meta name="color-scheme" content="light dark">
 
   <!-- Apply saved theme BEFORE styles load to prevent flash -->
@@ -17,13 +15,9 @@
           document.documentElement.setAttribute('data-theme', savedTheme);
           document.documentElement.style.colorScheme = savedTheme;
         }
-      } catch (e) {
-        // Ignore if storage is unavailable
-      }
+      } catch (e) {}
     })();
   </script>
-
-  <!-- Theme & Layout CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
 </head>
 <body>
@@ -31,15 +25,12 @@
     {% include header.html %}
     {% include navigation.html %}
   </header>
-
   <main class="site-main" role="main">
     {{ content }}
   </main>
-
   <footer class="site-footer" role="contentinfo">
     {% include footer.html %}
   </footer>
-
   <!-- Theme Toggle JS -->
   <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
   <!-- Markdown Table Wrapper -->
