@@ -1,7 +1,7 @@
 ---
 title: Intuiface Guide
 layout: default
-permalink: /guides/intuiface/
+permalink: /sonic-playground-guides/guides/intuiface/
 ---
 
 ## Intuiface Systems Operating Guide - 07/30/2025

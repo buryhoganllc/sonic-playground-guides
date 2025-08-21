@@ -1,7 +1,7 @@
 ---
 title: About
 layout: default
-permalink: /about/
+permalink: /sonic-playground-guides/about/
 ---
 
 ## About This Site

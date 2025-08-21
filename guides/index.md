@@ -1,10 +1,10 @@
 ---
 title: Guides
 layout: default
-permalink: /guides/
+permalink: /sonic-playground-guides/guides/
 ---
 
 # Guides
 
-- [Electric Forest Operating Guide](/guides/electric-forest/)
-- [Intuiface Systems Operating Guide](/guides/intuiface/)
+- [Electric Forest Operating Guide](sonic-playground-guides/guides/electric-forest/)
+- [Intuiface Systems Operating Guide](sonic-playground-guides/guides/intuiface/)
