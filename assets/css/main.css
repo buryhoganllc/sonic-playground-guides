@@ -128,3 +128,45 @@ code {
     margin-top: 1rem;
   }
 }
+
+/* Markdown table formatting - make like GitHub */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2em 0;
+  font-size: 1em;
+  background: var(--card);
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background-color: #f6f8fa;
+  font-weight: 600;
+}
+
+[data-theme="dark"] th {
+  background-color: #23272e;
+}
+
+tr:nth-child(even) {
+  background-color: #f6f8fa;
+}
+
+[data-theme="dark"] tr:nth-child(even) {
+  background-color: #23272e;
+}
+
+tr:hover {
+  background: #eaecef;
+}
+
+[data-theme="dark"] tr:hover {
+  background: #313640;
+}
