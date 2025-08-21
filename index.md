@@ -1,7 +1,7 @@
 ---
 title: Home
 layout: default
-permalink: /sonic-playground-guides/
+permalink: /
 ---
 
 # Sonic Playground Operating Guides

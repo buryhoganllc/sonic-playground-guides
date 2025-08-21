@@ -1,7 +1,7 @@
 ---
 title: Electric Forest Operating Guide
 layout: default
-permalink: /sonic-playground-guides/guides/electric-forest/
+permalink: /electric-forest/
 ---
 
 ## Electric Forest Operating Guide - 8/17/25

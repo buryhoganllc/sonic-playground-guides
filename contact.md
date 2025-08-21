@@ -1,7 +1,7 @@
 ---
 title: Contact
 layout: default
-permalink: /sonic-playground-guides/contact/
+permalink: /contact/
 ---
 
 ## Contact

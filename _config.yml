@@ -1,7 +1,7 @@
 title: "Sonic Playground Guides"
 description: "Minimal, readable GitHub Pages site for operating guides and manuals."
-baseurl: ""
-url: ""     
+baseurl: "/sonic-playground-guides"   # <-- This is CRITICAL!
+url: "https://buryhoganllc.github.io"
 markdown: kramdown
 theme: minima
 plugins:
