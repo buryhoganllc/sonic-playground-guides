@@ -1,39 +1,25 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<html lang="en">
 <head>
   <meta charset="utf-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
-  <meta name="color-scheme" content="light dark">
-
-  <!-- Apply saved theme BEFORE styles load to prevent flash -->
-  <script>
-    (function() {
-      try {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-          document.documentElement.setAttribute('data-theme', savedTheme);
-          document.documentElement.style.colorScheme = savedTheme;
-        }
-      } catch (e) {}
-    })();
-  </script>
-  <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
-  <header class="site-header" role="banner">
-    {% include header.html %}
-    {% include navigation.html %}
+  <header class="site-header">
+    <nav>
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/guides/' | relative_url }}">Guides</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
+    </nav>
   </header>
-  <main class="site-main" role="main">
+  <main class="site-main">
     {{ content }}
   </main>
-  <footer class="site-footer" role="contentinfo">
-    {% include footer.html %}
+  <footer class="site-footer">
+    &copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.
   </footer>
-  <!-- Theme Toggle JS -->
-  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
-  <!-- Markdown Table Wrapper -->
-  <script src="{{ '/assets/js/table-wrap.js' | relative_url }}"></script>
 </body>
 </html>
