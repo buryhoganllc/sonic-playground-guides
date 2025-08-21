@@ -4,8 +4,13 @@
   <meta charset="utf-8">
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Modern, readable font from Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Inter:400,500,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <style>
+    /* Fallback if main.css is missing */
+    body { font-family: 'Inter', Arial, sans-serif; }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -15,7 +20,7 @@
       <a href="{{ '/about/' | relative_url }}">About</a>
       <a href="{{ '/contact/' | relative_url }}">Contact</a>
     </nav>
-    <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
   </header>
   <main class="site-main">
     {{ content }}
@@ -30,9 +35,15 @@
     function setTheme(mode) {
       document.documentElement.setAttribute('data-theme', mode ? 'dark' : 'light');
       toggleBtn.textContent = mode ? '☀️' : '🌙';
+      toggleBtn.title = mode ? 'Switch to light mode' : 'Switch to dark mode';
     }
     function getMode() {
-      return localStorage.getItem(darkModeKey) === 'true';
+      // If preference exists, use it
+      if (localStorage.getItem(darkModeKey) !== null) {
+        return localStorage.getItem(darkModeKey) === 'true';
+      }
+      // Otherwise, follow system preference
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
     toggleBtn.addEventListener('click', () => {
       const mode = !getMode();
@@ -41,6 +52,12 @@
     });
     // Init on page load
     setTheme(getMode());
+    // Listen for system preference changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      if (localStorage.getItem(darkModeKey) === null) {
+        setTheme(e.matches);
+      }
+    });
   </script>
 </body>
 </html>
