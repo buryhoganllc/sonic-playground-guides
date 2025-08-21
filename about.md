@@ -1,6 +1,7 @@
 ---
 title: About
 layout: default
+permalink: /about/
 ---
 
 ## About This Site

@@ -1,6 +1,7 @@
 ---
 title: Electric Forest Operating Guide
 layout: default
+permalink: /guides/electric-forest/
 ---
 
 ## Electric Forest Operating Guide - 8/17/25
