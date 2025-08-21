@@ -120,6 +120,16 @@ a:hover, a:focus {
   color: var(--link-hover);
 }
 
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+code {
+  background: var(--code-inline-bg);
+  color: var(--code-fg);
+}
+
 blockquote {
   margin: 1rem 0;
   padding: 0.5rem 1rem;
@@ -129,17 +139,24 @@ blockquote {
   font-style: italic;
 }
 
-hr {
-  border: 0;
-  border-top: 1px solid var(--border);
-}
-
 p code, li code, td code {
   background: var(--code-inline-bg);
   color: var(--code-fg);
   padding: 0.15em 0.3em;
   border-radius: 3px;
   font-size: 0.95em;
+}
+
+pre {
+  background: var(--code-bg);
+  color: var(--code-fg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto; /* horizontal scroll if needed */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 pre, .highlight {
