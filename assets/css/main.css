@@ -23,11 +23,19 @@
    ========= */
 body {
   font-family: 'Inter', Arial, sans-serif;
-  color: #222;
+  color: #222; /* <-- Default for light mode */
   background: var(--card);
   margin: 0;
   min-height: 100vh;
-  transition: background 0.15s;
+  transition: background 0.15s, color 0.15s;
+}
+
+/* =========
+   SECTION: Dark Mode Text Color (Modification)
+   Makes regular text light for dark mode for readability.
+   ========= */
+[data-theme="dark"] body {
+  color: #eaeefa; /* <-- Light, readable text for dark mode */
 }
 
 /* =========
