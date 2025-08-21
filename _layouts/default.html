@@ -36,11 +36,12 @@
     {{ content }}
   </main>
 
-  {% include footer.html %}
+  <footer class="site-footer" role="contentinfo">
+    {% include footer.html %}
+  </footer>
 
   <!-- Theme Toggle JS -->
   <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
-
   <!-- Markdown Table Wrapper -->
   <script src="{{ '/assets/js/table-wrap.js' | relative_url }}"></script>
 </body>
