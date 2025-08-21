@@ -83,6 +83,11 @@ body {
   font-size: 1.5em;
   cursor: pointer;
   margin-left: 1.5rem;
+  color: #222;
+  transition: color 0.15s;
+}
+[data-theme="dark"] #theme-toggle {
+  color: #eaeefa;
 }
 
 /* =========
@@ -103,6 +108,9 @@ body {
   font-size: 0.9em;
   margin: 2rem 0 0 0;
   padding-bottom: 2rem;
+}
+[data-theme="dark"] .site-footer {
+  color: #aaa;
 }
 
 /* =========
@@ -171,6 +179,40 @@ pre {
 code {
   padding: 0.2em 0.5em;
   font-size: 0.97em;
+}
+
+/* =========
+   SECTION: Link Styles (Light Mode)
+   ========= */
+a {
+  color: #139c8a;
+  text-decoration: underline;
+  transition: color 0.15s;
+}
+a:hover {
+  color: #2c3444;
+  text-decoration: underline;
+}
+a:visited {
+  color: #4c2f92;
+}
+
+/* =========
+   SECTION: Link Styles (Dark Mode)
+   ========= */
+[data-theme="dark"] a,
+[data-theme="dark"] .site-header nav a {
+  color: #7fceff; /* Bright cyan for readability */
+  text-decoration: underline;
+  transition: color 0.15s;
+}
+[data-theme="dark"] a:hover,
+[data-theme="dark"] .site-header nav a:hover {
+  color: #ffe066; /* Yellow for hover, very visible */
+}
+[data-theme="dark"] a:visited,
+[data-theme="dark"] .site-header nav a:visited {
+  color: #a78bfa; /* Light violet for visited links */
 }
 
 /* =========
