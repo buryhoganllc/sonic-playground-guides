@@ -6,8 +6,5 @@ permalink: /guides/
 
 ## Operating Guides
 
-<li><a href="{{ '/electric-forest/' | relative_url }}">Electric Forest operating guide</a></li>  
-
-<p>
-
-<li><a href="{{ '/intuiface/' | relative_url }}">Intuiface Systems operating guide</a></li>
+- [Electric Forest operating guide](/guides/electric-forest.md)
+- [Intuiface systems operating guide](/guides/intuiface.md)
