@@ -8,6 +8,9 @@ plugins:
 minima:
   skin: auto
 
+# Global pretty permalinks
+permalink: pretty
+
 # Mark all pages to use Markdown and not posts
 defaults:
   - scope:
@@ -15,7 +18,8 @@ defaults:
       type: "pages"
     values:
       layout: "default"
-      permalink: "/:path/:basename:output_ext"
+      # Remove explicit .html permalink so global `pretty` setting applies
+      # permalink: "/:path/:basename:output_ext"
 
 # Enable Markdown processor and syntax highlighter
 markdown: kramdown
