@@ -63,5 +63,17 @@
       }
     });
   </script>
+  <script>
+  // Find all <a> tags that start with http and do not include your site's domain
+  document.addEventListener("DOMContentLoaded", function() {
+    const siteDomain = location.hostname.replace(/^www\./, "");
+    document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+      if (!link.href.includes(siteDomain)) {
+        link.setAttribute("target", "_blank");
+        link.setAttribute("rel", "noopener noreferrer");
+      }
+    });
+  });
+</script>
 </body>
 </html>
