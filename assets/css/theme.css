@@ -252,14 +252,20 @@ pre, .highlight {
 
 /* ---------- Footer ---------- */
 .site-footer {
-  margin: 0;
-  padding: 1rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
   background: var(--card);
   border-top: 1px solid var(--border);
   box-shadow: var(--shadow);
-  position: relative;
-  z-index: 1;
+  z-index: 900; /* Lower than theme toggle button */
+  padding: 1rem 2rem; /* Increased left/right padding */
+  margin: 0;
+  text-align: left;
 }
+
 .site-footer hr {
   margin: 0 0 0.5rem;
 }
@@ -267,18 +273,12 @@ pre, .highlight {
   margin: 0.5rem 0;
 }
 
-/* Avoid invisible blockers */
-.site-footer::before,
-.site-footer::after {
-  pointer-events: none;
-}
-
 /* ---------- Theme toggle button ---------- */
 #theme-toggle {
   position: fixed;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  z-index: 1000;
+  right: 2rem; /* Matches footer padding */
+  bottom: 2rem;
+  z-index: 1000; /* Above footer for clickability */
   margin: 0;
   padding: 0.75rem 1.25rem;
   background: var(--card);
