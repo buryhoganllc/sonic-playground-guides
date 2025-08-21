@@ -1,7 +1,6 @@
 ---
-title: Intuiface Systems
+title: Intuiface Systems Operating Guide
 layout: default
-permalink: /guides/intuiface/
 ---
 
 ## Intuiface Systems Operating Guide - 07/30/2025
