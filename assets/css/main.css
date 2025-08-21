@@ -1,23 +1,45 @@
 :root {
   --bg: #fff;
   --fg: #222;
+  --card: #f8fafc;
   --accent: #2563eb;
   --border: #e2e8f0;
-  --code-bg: #f6f8fa;
+  --radius: 10px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.08);
+  --code-bg: #f5f7fa;
+  --code-fg: #222;
+}
+
+[data-theme="dark"] {
+  --bg: #18181b;
+  --fg: #f3f4f6;
+  --card: #23232a;
+  --accent: #818cf8;
+  --border: #313244;
+  --shadow: 0 2px 8px rgba(0,0,0,0.18);
+  --code-bg: #23232a;
+  --code-fg: #f3f4f6;
 }
 
 body {
+  font-family: 'Inter', Arial, sans-serif;
   background: var(--bg);
   color: var(--fg);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
   margin: 0;
-  line-height: 1.7;
 }
 
-.site-header {
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
+.site-header,
+.site-footer {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 0 0 2rem 0;
   padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .site-header nav {
@@ -30,38 +52,56 @@ body {
   color: var(--accent);
   text-decoration: none;
   font-weight: 500;
+  padding: 0.5em 0.7em;
+  border-radius: var(--radius);
+  transition: background 0.15s;
 }
 
 .site-header a:hover {
-  text-decoration: underline;
+  background: var(--accent);
+  color: var(--card);
+}
+
+#theme-toggle {
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  padding: 0.2em 0.6em;
+  border-radius: var(--radius);
+  transition: background 0.2s;
+}
+#theme-toggle:hover {
+  background: var(--accent);
+  color: var(--card);
 }
 
 .site-main {
-  max-width: 800px;
+  max-width: 900px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .site-footer {
-  border-top: 1px solid var(--border);
-  background: var(--bg);
   color: #777;
-  text-align: left;
   font-size: 0.95em;
-  padding: 1rem 2rem;
   margin-top: 4rem;
+  justify-content: flex-start;
 }
 
 pre, code {
   font-family: "Fira Mono", "Menlo", "Monaco", "Consolas", monospace;
   background: var(--code-bg);
-  color: var(--fg);
-  border-radius: 4px;
+  color: var(--code-fg);
+  border-radius: var(--radius);
 }
 
 pre {
   padding: 1rem;
   overflow-x: auto;
+  font-size: 1em;
 }
 
 code {
@@ -69,14 +109,22 @@ code {
   font-size: 0.97em;
 }
 
+/* Responsive styles */
 @media (max-width: 600px) {
   .site-header, .site-footer {
     padding: 1rem;
+    margin: 0 0 1rem 0;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .site-main {
     padding: 0 0.5rem;
   }
   .site-header nav {
     gap: 1rem;
+  }
+  #theme-toggle {
+    margin-left: 0;
+    margin-top: 1rem;
   }
 }

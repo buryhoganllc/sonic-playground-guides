@@ -1,7 +1,7 @@
 title: "Sonic Playground Guides"
 description: "Minimal, readable GitHub Pages site for operating guides and manuals."
-baseurl: "" # set if publishing to a sub-path
-url: ""     # set your site url
+baseurl: ""
+url: ""     
 markdown: kramdown
 theme: minima
 plugins:

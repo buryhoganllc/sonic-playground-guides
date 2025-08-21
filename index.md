@@ -6,6 +6,6 @@ permalink: /
 
 # Sonic Playground Operating Guides
 
-A collection of operating guides for Sonic Playground.
+Welcome to the Sonic Playground operating guides and technical manuals.
 
 - See [Guides](/guides/) for all documents.

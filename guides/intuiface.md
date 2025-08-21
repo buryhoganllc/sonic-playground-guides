@@ -1,5 +1,5 @@
 ---
-title: Intuiface Systems Operating Guide
+title: Intuiface Guide
 layout: default
 permalink: /guides/intuiface/
 ---
