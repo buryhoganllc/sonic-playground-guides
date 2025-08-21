@@ -1,7 +1,7 @@
 ---
 title: About This Guide
 layout: default
-permalink: /
+permalink: /about/
 ---
 
 ## About
