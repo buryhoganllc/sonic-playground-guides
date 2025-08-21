@@ -4,7 +4,7 @@ layout: default
 permalink: /guides/
 ---
 
-# Guides
+## Guides
 
 - [Electric Forest Operating Guide]({{ site.baseurl }}/electric-forest/)
 - [Intuiface Systems Operating Guide]({{ site.baseurl }}/intuiface/)
