@@ -46,15 +46,15 @@ When troubleshooting a physical system issue, direct access is recommended.
 
 All admin accounts on the host machines use the following credentials:  
 
-- User: sp-admin
-- Pass: 2008
+- User: `sp-admin`
+- Pass: `2008`
 
-All Intuiface host machines run in a non-admin “show” account called “sp-show” with a password of “s0n1csh0w”.  
+All Intuiface host machines run in a non-admin “show” account called `sp-show` with a password of `s0n1csh0w`.  
 It is unlikely that you will ever need to enter these credentials.
 
 #### Jump Desktop Configuration
 
-- Configure your installation of Jump Desktop to use the ‘sp-admin’ credentials for Auto Logon.
+- Configure your installation of Jump Desktop to use the `sp-admin` credentials for Auto Logon.
 - Configure your Display settings to be “Separate Windows” for _Film & TV_ and _Video Games_.
 - Configure your Sharing settings to NOT play audio (uncheck the box).
 
@@ -67,8 +67,8 @@ This is a useful means of interfacing with the host PCs when you only wish to st
 - Select “Players” from the “Management” icon column.
 - Select the Player instance you wish to control (all relevant players are prefixed with “SonicPlayground-“ and the interactive title.)
 - Select the appropriate action:
-  - “Restart” – close and relaunch Intuiface Player
-  - “Reboot” – perform a PC reboot
+  - `Restart` – close and relaunch Intuiface Player
+  - `Reboot` – perform a PC reboot
 
 ## Manual Intervention
 
@@ -82,7 +82,7 @@ If the secondary display surface (the Samsung television) does not automatically
 #### Via wireless keyboard/trackpad
 
 - Turn on the television manually via the power button under the lower right bezel, or via the remote control in Curatorial labeled “Samsung DU7200.”
-- Locate the appropriate Logitech controller and press the function and F11 keys simultaneously (FN + F11).
+- Locate the appropriate Logitech controller and press the `Function` and `F11` keys simultaneously (`FN` + `F11`).
 - This will cycle display modes, and you will see the Attract screen appear on the television.
 
 #### Via Jump Desktop
@@ -113,25 +113,25 @@ All Intuiface hosts will automatically start up at 6AM and shut down at 1AM, dai
 Automated Startup times are set in the BIOS of each host machine. To edit the time at which a host machine shuts down:  
 
 - Access the host machine with the corresponding wireless keyboard/trackpad
-- Press ESC to stop Intuiface
-- Press Ctrl+Alt+Del
-- Select Reboot from the Power icon in the lower right corner
-- When the host machine reboots and you see the “NUC” screen, press the F2 key (FN+F2) to access the BIOS page.
+- Press `ESC` to stop Intuiface
+- Press `Ctrl`+`Alt`+`Del`
+- Select `Reboot` from the Power icon in the lower right corner
+- When the host machine reboots and you see the “NUC” screen, press the `F2` key (`FN`+`F2`) to access the `BIOS` page.
 - Click the Power tab
 - Click Advanced Power Settings
-- Scroll down to the “Wake on S5 Event” entry and chance the value from “6” to whatever you like. Note: this setting uses 24-hour clock time.  
+- Scroll down to the `Wake on S5 Event` entry and chance the value from `6` to whatever you like. _Note: this setting uses 24-hour clock time._  
 
-Press the F10 key (FN+F10) to save and exit. The machine will reboot and enter a normal operating mode.  
+Press the `F10` key (`FN`+`F10`) to save and exit. The machine will reboot and enter a normal operating mode.  
 
 Automated shut down events on the Intuiface interactives are set in Task Scheduler. To edit the time at which a host machine shuts down:  
 
 - Access the host machine with the corresponding wireless keyboard/trackpad
-- Press ESC to stop Intuiface
-- Press Ctrl+Alt+Del
-- Select Logout
-- When you reach the login screen, select SP-Admin as the user and enter the admin password.
-- When you reach the Desktop, click search from the Start menu and enter ‘Task Scheduler’
-- The event named ‘Shutdown’ exists in the main user event library.
+- Press `ESC` to stop Intuiface
+- Press `Ctrl`+`Alt`+`Del`
+- Select `Logout`
+- When you reach the login screen, select `SP-Admin` as the user and enter the admin password.
+- When you reach the Desktop, click search from the Start menu and enter `Task Scheduler`
+- The event named `Shutdown` exists in the main user event library.
 - You may edit the start time of the event to occur earlier or later in the day.
 - __Do not__ change any other settings.
 - Exit Task Scheduler and reboot the host machine to return to normal operating mode.
