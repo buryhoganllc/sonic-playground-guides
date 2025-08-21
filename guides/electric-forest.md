@@ -215,6 +215,8 @@ The event list is as follows:
 
 ### Track volume control (Ableton)
 
+<div class="table-wrapper">
+
 | Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
 | ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
 | 01   | CC         | 01     | var    | from max 1       | 01-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
@@ -250,7 +252,11 @@ The event list is as follows:
 | 01   | CC         | 16     | var    | from max 1       | 16-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
 | 01   | CC         | 16     | var    | from max 1       | Sampler 16        | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
 
+</div>
+
 ### Lighting Control (MadMapper)
+
+<div class="table-wrapper">
 
 | Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
 | ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
@@ -271,7 +277,11 @@ The event list is as follows:
 | 02   | CC         | 15     | var    | IAC Driver Bus 1 |                   | Tube 15 color width | 0          | 127       | set active color fill level     |
 | 02   | CC         | 16     | var    | IAC Driver Bus 1 |                   | Tube 16 color width | 0          | 127       | set active color fill level     |
 
+</div>
+
 ### Transport/Output Control (Ableton)
+
+<div class="table-wrapper">
 
 | Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
 | ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
@@ -280,20 +290,30 @@ The event list is as follows:
 | 03   | CC         | 20     | 127    | IAC Driver Bus 1 | A-North \| Mixer  | Track Volume        | -40 dB     | -2.5 dB   | set surround fader position     |
 | 03   | CC         | 20     | 127    | IAC Driver Bus 1 | B-South \| Mixer  | Track Volume        | -40 dB     | -2.5 dB   | set surround fader position     |
 
+</div>
+
 ### Cue Control (MadMapper)
+
+<div class="table-wrapper">
 
 | Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
 | ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
 | 04   | CC         | 03     | 127    | IAC Driver Bus 1 | Scene 01 (Chasin) |                     | 0          | 127       | select color combo for scene    |
 | 04   | CC         | 04     | 127    | IAC Driver Bus 1 | Scene 02 (Martin) |                     | 0          | 127       | select color combo for scene    |
 
+</div>
+
 ### Scene Control (Ableton)
+
+<div class="table-wrapper">
 
 | Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
 | ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
 | 05   | CC         | 01     | 127    | IAC Driver Bus 1 | Scene 1 (Fade Out)|                     |            |           | trigger fade out scene          |
 | 05   | CC         | 03     | 127    | IAC Driver Bus 1 | Scene 3 (Chasin)  |                     |            |           | trigger scene                   |
 | 05   | CC         | 04     | 127    | IAC Driver Bus 1 | Scene 4 (Martin)  |                     |            |           | trigger scene                   |
+
+</div>
 
 ## Appendix B – Event Automation  
 
