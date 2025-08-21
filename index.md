@@ -1,7 +1,7 @@
 ---
 title: Home
 layout: default
-permalink: /home/
+permalink: /
 ---
 
 ## Sonic Playground Operating Guides
