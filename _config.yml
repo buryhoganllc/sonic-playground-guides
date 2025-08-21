@@ -1,0 +1,9 @@
+title: "Sonic Playground Guides"
+description: "Minimal, readable GitHub Pages site for operating guides and manuals."
+baseurl: "" # set if publishing to a sub-path
+url: ""     # set your site url
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+highlighter: rouge
