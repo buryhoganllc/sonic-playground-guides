@@ -98,9 +98,9 @@ _Electric Forest_ is constructed to run autonomously, with manual intervention r
 
 ### Changing Ableton Behavior (song lists and volume states)  
 
-To change between the Shaun Chasin and Max Martin music sets on-demand, select the appropriate On Demand `Power Manager` event from the menu bar list by clicking the ![Power Manager macOS menu bar icon.](/assets/images/PM_menuBar.png)   icon.  
+To change between the Shaun Chasin and Max Martin music sets on-demand, select the appropriate On Demand `Power Manager` event from the menu bar list by clicking the ![Power Manager macOS menu bar icon.]({{ '/assets/images/PM_menuBar.png' | relative_url }})   icon.  
 
-![Power Manager on-demand list from menu bar.](/assets/images/PM_onDemand.png)  
+![Power Manager on-demand list from menu bar.]({{ '/assets/images/PM_onDemand.png' | relative_url }})  
 
 Selecting `“_Ableton-Max Martin_”` or `“_Ableton-Shaun Chasin_”` will fade out the currently playing audio, crossfade the lights to the new cue, and then begin playback of the selected song mix.  
 
@@ -114,7 +114,7 @@ To override scheduled events, open `Power Manager` from the Dock (the purple ala
 For example, to set the Martin mix on-demand and prevent scheduled scene transitions to the Chasin mix, first select `“Ableton-Max Martin”` from the On Demand list (see above).  
 Next, uncheck the `“_Shaun Chasin – Hourly_”` entry in the `Power Manager` event store:  
 
-![Power Manager event store list all scheduled events.](/assets/images/PM_eventStore.png)  
+![Power Manager event store list all scheduled events.]({{ '/assets/images/PM_eventStore.png' | relative_url }})  
 
 Make sure to restore normal behavior by re-checking any unchecked boxes when your event has concluded.  
 
