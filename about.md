@@ -1,10 +1,9 @@
 ---
-title: About This Guide
+title: About
 layout: default
-permalink: /about/
 ---
 
-## About
+## About This Site
 
 This site provides operating guides for a select number of interactive systems within the _Sonic Playground_ exhibit.
 
