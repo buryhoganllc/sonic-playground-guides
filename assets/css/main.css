@@ -170,3 +170,25 @@ tr:hover {
 [data-theme="dark"] tr:hover {
   background: #313640;
 }
+
+/* Syntax highlighting - make like GitHub */
+
+pre, code {
+  font-family: "Fira Mono", "Menlo", "Monaco", "Consolas", monospace;
+  background: var(--code-bg, #f5f7fa);
+  color: var(--code-fg, #222);
+  border-radius: var(--radius, 8px);
+}
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 1em;
+  margin: 1em 0;
+  line-height: 1.6;
+}
+
+code {
+  padding: 0.2em 0.5em;
+  font-size: 0.97em;
+}
