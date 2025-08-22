@@ -4,6 +4,8 @@ layout: default
 permalink: /electric-forest/
 ---
 
+{% include toc.html %}
+
 ## Electric Forest Operating Guide - 8/17/25
 
 ## Sonic Playground - GRAMMY Museum
