@@ -7,3 +7,11 @@ theme: minima
 plugins:
   - jekyll-feed
 highlighter: rouge
+
+# Optional: Document your main stylesheet
+sass:
+  style: compressed
+
+# Optional: List custom assets for maintainers
+assets:
+  - assets/css/main.css
