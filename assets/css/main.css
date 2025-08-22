@@ -182,6 +182,68 @@ code {
 }
 
 /* =========
+   SECTION: Custom Syntax Highlighting for AppleScript & Bash/Shell (Rouge, Dark & Light Mode)
+   ========= */
+@media (prefers-color-scheme: dark) {
+  /* General code block background and text */
+  .highlight pre, pre, code {
+    background: #22272e !important;
+    color: #f8f8f2 !important;
+  }
+
+  /* AppleScript & Bash/Shell Rouge classes */
+  /* Comments */
+  .highlight .c { color: #6a9955 !important; font-style: italic; }
+  /* Keywords */
+  .highlight .k { color: #ffb86c !important; }
+  .highlight .kn, .highlight .kp, .highlight .kr { color: #ffb86c !important; }
+  /* Strings */
+  .highlight .s { color: #50fa7b !important; }
+  .highlight .sa, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx { color: #50fa7b !important; }
+  /* Numbers */
+  .highlight .m { color: #bd93f9 !important; }
+  /* Function names, variables, built-ins */
+  .highlight .nf, .highlight .nv, .highlight .nb { color: #8be9fd !important; }
+  /* Operators */
+  .highlight .o { color: #ff79c6 !important; }
+  /* Punctuation */
+  .highlight .p { color: #f8f8f2 !important; }
+  /* Built-in shell commands */
+  .highlight .nb { color: #8be9fd !important; font-weight: bold; }
+  /* Shell prompt ($, %, >) */
+  .highlight .gp { color: #ff79c6 !important; font-weight: bold; }
+  /* Shell errors */
+  .highlight .err { color: #ff5555 !important; background: #282a36 !important; }
+  /* Section headings */
+  .highlight .gh { color: #ffb86c !important; font-weight: bold; }
+  /* Bold */
+  .highlight .gs { font-weight: bold; }
+  /* Italic */
+  .highlight .ge { font-style: italic; }
+}
+
+/* Optional: Improve default code contrast for light mode as well */
+@media (prefers-color-scheme: light) {
+  .highlight pre, pre, code {
+    background: #f6f8fa !important;
+    color: #24292f !important;
+  }
+  .highlight .c { color: #6a9955 !important; font-style: italic; }
+  .highlight .k { color: #d73a49 !important; }
+  .highlight .s { color: #032f62 !important; }
+  .highlight .m { color: #005cc5 !important; }
+  .highlight .nf, .highlight .nv, .highlight .nb { color: #6f42c1 !important; }
+  .highlight .o { color: #d73a49 !important; }
+  .highlight .p { color: #24292f !important; }
+  .highlight .nb { color: #6f42c1 !important; font-weight: bold; }
+  .highlight .gp { color: #d73a49 !important; font-weight: bold; }
+  .highlight .err { color: #b31d28 !important; background: #ffeef0 !important; }
+  .highlight .gh { color: #d73a49 !important; font-weight: bold; }
+  .highlight .gs { font-weight: bold; }
+  .highlight .ge { font-style: italic; }
+}
+
+/* =========
    SECTION: Link Styles (Light Mode)
    ========= */
 a {
