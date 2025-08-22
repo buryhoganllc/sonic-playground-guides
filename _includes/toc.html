@@ -1,0 +1,16 @@
+<nav class="toc">
+  <h2>Table of Contents</h2>
+  <ul>
+    {% assign headings = content | number_of_headings: 3 %}
+    {% assign matches = content | scan: '(##+)\s+(.*)' %}
+    {% for match in matches %}
+      {% assign hashes = match[0] %}
+      {% assign text = match[1] %}
+      {% assign level = hashes | size %}
+      {% assign anchor = text | downcase | replace: ' ', '-' | replace: '[^a-z0-9\-]', '' %}
+      <li style="margin-left: {{ (level - 2) * 15 }}px">
+        <a href="#{{ anchor }}">{{ text }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
