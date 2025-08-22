@@ -4,9 +4,7 @@ layout: default
 permalink: /electric-forest/
 ---
 
-{% include toc.html %}
-
-## Electric Forest Operating Guide - 8/17/25
+## Electric Forest Operating Guide - updated 8/22/2025
 
 ## Sonic Playground - GRAMMY Museum
 
@@ -476,3 +474,4 @@ _Note_: the Mac Mini running _Electric Forest_ utilizes a binary install of the 
 - ![#ea5670](https://placehold.co/32x32/ea5670/ea5670.png) `#ea5670 - Background`
 
 - ![#fbd208](https://placehold.co/32x32/fbd208/fbd208.png) `#fbd208 - Foreground`
+
