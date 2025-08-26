@@ -4,7 +4,7 @@ layout: default
 permalink: /intuiface/
 ---
 
-## Intuiface Systems Operating Guide - 07/30/2025
+## Intuiface Systems Operating Guide - 08/26/2025
 
 ## Sonic Playground - GRAMMY Museum
 
@@ -44,10 +44,7 @@ When troubleshooting a physical system issue, direct access is recommended.
 
 ### Authentication
 
-All admin accounts on the host machines use the following credentials:  
-
-- User: `sp-admin`
-- Pass: `2008`
+All admin accounts on the host machines use the admin credentials. Refer to the `Credentials.txt` file.
 
 All Intuiface host machines run in a non-admin “show” account called `sp-show` with a password of `s0n1csh0w`.  
 It is unlikely that you will ever need to enter these credentials.
