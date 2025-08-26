@@ -4,7 +4,7 @@ layout: default
 permalink: /electric-forest/
 ---
 
-## Electric Forest Operating Guide - updated 8/22/2025
+## Electric Forest Operating Guide - updated 8/26/2025
 
 ## Sonic Playground - GRAMMY Museum
 
@@ -87,10 +87,7 @@ _Remote Access_ – The _Electric Forest_ Mac Mini is accessible via `Jump Deskt
 
 When troubleshooting a physical system issue, direct access is recommended.  
 
-_Authentication_ – all admin accounts on the host machines use the following credentials:  
-
-- User: `sp-admin`
-- Pass: `2008`
+_Authentication_ – all admin accounts on the host machines use the admin credentials. Refer to the `Credentials.txt` file.
 
 ## Manual Intervention
 
