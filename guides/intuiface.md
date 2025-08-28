@@ -44,10 +44,7 @@ When troubleshooting a physical system issue, direct access is recommended.
 
 ### Authentication
 
-All admin accounts on the host machines use the admin credentials. Refer to the `Credentials.txt` file.
-
-All Intuiface host machines run in a non-admin “show” account called `sp-show` with a password of `s0n1csh0w`.  
-It is unlikely that you will ever need to enter these credentials.
+All admin accounts on the host machines use the admin credentials. A kiosk mode accout (`sp-show`) runs by default. Refer to the `Credentials.txt` file for more information.
 
 #### Jump Desktop Configuration
 
