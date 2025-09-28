@@ -97,7 +97,7 @@ _Electric Forest_ is constructed to run autonomously, with manual intervention r
 
 To change between the Shaun Chasin and Max Martin music sets on-demand, select the appropriate On Demand `Power Manager` event from the scheduler list by clicking the ![Power Manager macOS menu bar icon.]({{ '/assets/images/PM_menuBar.png' | relative_url }})   `Actions` menu and selecting `Perform.`  
 
-![Power Manager on-demand list from menu bar.]({{ '/assets/images/PM_onDemand.png' | relative_url }})  
+![Power Manager on-demand list from menu bar.]({{ '/assets/images/PM_SchedulerView.png' | relative_url }})  
 
 Selecting `“_Ableton-Max Martin_”` , `“_Ableton-Shaun Chasin_”` , or `"_Ableton-John Carpenter_"` will fade out the currently playing audio, crossfade the lights to the new cue, and then begin playback of the selected song mix.  
 
@@ -105,11 +105,13 @@ You may also change the surround output level on-demand by selecting either `“
 
 ### Overriding Scheduled Events  
 
-At times it may be necessary to manually trigger a music set/volume level keep it running beyond the point when the next programmed would occur (media days, special events, etc.)
-To override scheduled events, navigate to `Power Manager` and un-check the appropriate Scheduled event.  
+At times it may be necessary to manually trigger a music set/volume level keep it running beyond the point when the next scheduled event would occur (media days, special events, etc.)
+To override scheduled events, navigate to the `Power Manager` List View and un-check the appropriate Scheduled event.  
 
 For example, to set the Martin mix on-demand and prevent scheduled scene transitions to the Chasin mix, first select `“Ableton-Max Martin”` from the On Demand list (see above).  
 Next, uncheck the `“_Shaun Chasin – Hourly_”` entry in the `Power Manager` Scheduler list:  
+
+![Power Manager cancelling scheduled events.]({{ '/assets/images/PM_ListView.png' | relative_url }})  
 
 Make sure to restore normal behavior by re-checking any unchecked boxes when your event has concluded.  
 
@@ -503,6 +505,7 @@ _Note_: the Mac Mini running _Electric Forest_ utilizes a binary install of the 
 - ![#ea5670](https://placehold.co/32x32/cc000e/cc000e.png) `#cc000e - Background`
 
 - ![#fbd208](https://placehold.co/32x32/0000f2/0000f2.png) `#0000f2 - Foreground`
+
 
 
 
