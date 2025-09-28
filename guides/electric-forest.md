@@ -25,9 +25,9 @@ _Electric Forest_ utilizes `Max`, `Ableton`, and `MadMapper` show files to host 
 
 _Electric Forest_ runs 24/7 and requires limited user intervention. Show files may be launched manually via their Desktop aliases, if necessary. The aliases are named to reflect the order in which they are to be run:
 
-- 1 - MAX
-- 2 - ABLETON
-- 3 - MADMAPPER
+- `1 - MAX`
+- `2 - ABLETON`
+- `3 - MADMAPPER`
 
 Allow each application to fully load before launching the next file. Once that is complete, hide `Max` and `MadMapper`, then select the desired `Ableton` scene from the `Power Manager` menu bar list (see Scene Changes below.)  
 
@@ -44,7 +44,7 @@ _Electric Forest_ is hosted on an M2 Pro Mac Mini and runs 24/7 in a permanent a
 
 ### Scene Changes (Light and Sound cues)  
 
-As of 7/22/25, _Electric Forest_ is programmed to cycle between two music scenes:  
+_Electric Forest_ is programmed to cycle between two music scenes:  
 
 1. “Movements” – Shaun Chasin’s original composition
 2. Max Martin mix (“Baby One More Time,” “Since You’ve Been Gone,” “Everybody”)
@@ -81,9 +81,9 @@ A corresponding “Daytime Mode” script is run at 10:30AM SUNDAY-FRIDAY (9:30A
 
 ### Accessing the Host Machines  
 
-_Direct Access_ - The _Electric Forest_ wireless keyboard/trackpad controller is kept atop the equipment rack in the “closet” next to _Beat Nexus_. The closet door is opened via the 007 key in Curatorial.  
+_Direct Access_ - The _Electric Forest_ wireless keyboard/trackpad controller is kept atop the equipment rack in the “closet” next to _Beat Nexus_.  
 
-_Remote Access_ – The _Electric Forest_ Mac Mini is accessible via `Jump Desktop`. `Jump Desktop` is the ideal access method for manually triggering scene changes or volume states via the `Power Manager` menu bar list.  
+_Remote Access_ – The _Electric Forest_ Mac Mini is accessible via `Jump Desktop`. `Jump Desktop` is the ideal access method for manually triggering scene changes or volume states via the `Power Manager` event list.  
 
 When troubleshooting a physical system issue, direct access is recommended.  
 
@@ -95,23 +95,21 @@ _Electric Forest_ is constructed to run autonomously, with manual intervention r
 
 ### Changing Ableton Behavior (song lists and volume states)  
 
-To change between the Shaun Chasin and Max Martin music sets on-demand, select the appropriate On Demand `Power Manager` event from the menu bar list by clicking the ![Power Manager macOS menu bar icon.]({{ '/assets/images/PM_menuBar.png' | relative_url }})   icon.  
+To change between the Shaun Chasin and Max Martin music sets on-demand, select the appropriate On Demand `Power Manager` event from the scheduler list by clicking the ![Power Manager macOS menu bar icon.]({{ '/assets/images/PM_menuBar.png' | relative_url }})   `Actions` menu and selecting `Perform.`  
 
 ![Power Manager on-demand list from menu bar.]({{ '/assets/images/PM_onDemand.png' | relative_url }})  
 
-Selecting `“_Ableton-Max Martin_”` or `“_Ableton-Shaun Chasin_”` will fade out the currently playing audio, crossfade the lights to the new cue, and then begin playback of the selected song mix.  
+Selecting `“_Ableton-Max Martin_”` , `“_Ableton-Shaun Chasin_”` , or `"_Ableton-John Carpenter_"` will fade out the currently playing audio, crossfade the lights to the new cue, and then begin playback of the selected song mix.  
 
 You may also change the surround output level on-demand by selecting either `“_Ableton-Volume Daytime Mode_”` (normal volume) or `“_Ableton-Volume Nighttime Mode_”` (dimmed output, approximately 10 dB lower.)  
 
 ### Overriding Scheduled Events  
 
 At times it may be necessary to manually trigger a music set/volume level keep it running beyond the point when the next programmed would occur (media days, special events, etc.)
-To override scheduled events, open `Power Manager` from the Dock (the purple alarm clock icon) and un-check the appropriate event.  
+To override scheduled events, navigate to `Power Manager` and un-check the appropriate Scheduled event.  
 
 For example, to set the Martin mix on-demand and prevent scheduled scene transitions to the Chasin mix, first select `“Ableton-Max Martin”` from the On Demand list (see above).  
-Next, uncheck the `“_Shaun Chasin – Hourly_”` entry in the `Power Manager` event store:  
-
-![Power Manager event store list all scheduled events.]({{ '/assets/images/PM_eventStore.png' | relative_url }})  
+Next, uncheck the `“_Shaun Chasin – Hourly_”` entry in the `Power Manager` Scheduler list:  
 
 Make sure to restore normal behavior by re-checking any unchecked boxes when your event has concluded.  
 
@@ -505,5 +503,6 @@ _Note_: the Mac Mini running _Electric Forest_ utilizes a binary install of the 
 - ![#ea5670](https://placehold.co/32x32/cc000e/cc000e.png) `#cc000e - Background`
 
 - ![#fbd208](https://placehold.co/32x32/0000f2/0000f2.png) `#0000f2 - Foreground`
+
 
 
