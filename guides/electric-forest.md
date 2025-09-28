@@ -210,87 +210,84 @@ Tube sensor input – the MIDI data stream that sets an individual track/tube fa
 
 The event list is as follows:
 
-### Track volume control (Ableton)
+### Track Volume Control (Audio Host)
 
-| Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
-| ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
-| 01   | CC         | 01     | var    | from max 1       | 01-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 01     | var    | from max 1       | Sampler 1         | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 02     | var    | from max 1       | 02-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 02     | var    | from max 1       | Sampler 2         | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 03     | var    | from max 1       | 03-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 03     | var    | from max 1       | Sampler 3         | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 04     | var    | from max 1       | 04-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 04     | var    | from max 1       | Sampler 4         | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 05     | var    | from max 1       | 05-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 05     | var    | from max 1       | Sampler 5         | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 06     | var    | from max 1       | 06-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 06     | var    | from max 1       | Sampler 6         | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 07     | var    | from max 1       | 07-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 07     | var    | from max 1       | Sampler 7         | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 08     | var    | from max 1       | 08-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 08     | var    | from max 1       | Sampler 8         | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 09     | var    | from max 1       | 09-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 09     | var    | from max 1       | Sampler 9         | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 10     | var    | from max 1       | 10-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 10     | var    | from max 1       | Sampler 10        | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 11     | var    | from max 1       | 11-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 11     | var    | from max 1       | Sampler 11        | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 12     | var    | from max 1       | 12-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 12     | var    | from max 1       | Sampler 12        | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 13     | var    | from max 1       | 13-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 13     | var    | from max 1       | Sampler 13        | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 14     | var    | from max 1       | 14-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 14     | var    | from max 1       | Sampler 14        | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 15     | var    | from max 1       | 15-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 15     | var    | from max 1       | Sampler 15        | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 16     | var    | from max 1       | 16-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
-| 01   | CC         | 16     | var    | from max 1       | Sampler 16        | Track Volume        | -60 dB     | 0 dB      | set track fader position        |
+| Chan | Event      | Byte 1 | Byte 2 | Device           | Path                              | Name                | Min Val    | Max Val   | Comments                        |
+| ---- | ---------- | ------ | ------ | ---------------- | --------------------------------- | ------------------- | ---------- | --------- | ------------------------------- |
+| 01   | CC         | 01     | var    | from max 1       | Max -> Ableton: 01-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
+| 01   | CC         | 02     | var    | from max 1       | Max -> Ableton: 02-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
+| 01   | CC         | 03     | var    | from max 1       | Max -> Ableton: 03-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
+| 01   | CC         | 04     | var    | from max 1       | Max -> Ableton: 04-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
+| 01   | CC         | 05     | var    | from max 1       | Max -> Ableton: 05-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
+| 01   | CC         | 06     | var    | from max 1       | Max -> Ableton: 06-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
+| 01   | CC         | 07     | var    | from max 1       | Max -> Ableton: 07-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
+| 01   | CC         | 08     | var    | from max 1       | Max -> Ableton: 08-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
+| 01   | CC         | 09     | var    | from max 1       | Max -> Ableton: 09-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
+| 01   | CC         | 10     | var    | from max 1       | Max -> Ableton: 10-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
+| 01   | CC         | 11     | var    | from max 1       | Max -> Ableton: 11-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
+| 01   | CC         | 12     | var    | from max 1       | Max -> Ableton: 12-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
+| 01   | CC         | 13     | var    | from max 1       | Max -> Ableton: 13-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
+| 01   | CC         | 14     | var    | from max 1       | Max -> Ableton: 14-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
+| 01   | CC         | 15     | var    | from max 1       | Max -> Ableton: 15-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
+| 01   | CC         | 16     | var    | from max 1       | Max -> Ableton: 16-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
 
-### Lighting Control (MadMapper)
+### Lighting Control (Pixel Mapping)
 
-| Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
-| ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
-| 02   | CC         | 01     | var    | IAC Driver Bus 1 |                   | Tube 01 color width | 0          | 127       | set active color fill level     |
-| 02   | CC         | 02     | var    | IAC Driver Bus 1 |                   | Tube 02 color width | 0          | 127       | set active color fill level     |
-| 02   | CC         | 03     | var    | IAC Driver Bus 1 |                   | Tube 03 color width | 0          | 127       | set active color fill level     |
-| 02   | CC         | 04     | var    | IAC Driver Bus 1 |                   | Tube 04 color width | 0          | 127       | set active color fill level     |
-| 02   | CC         | 05     | var    | IAC Driver Bus 1 |                   | Tube 05 color width | 0          | 127       | set active color fill level     |
-| 02   | CC         | 06     | var    | IAC Driver Bus 1 |                   | Tube 06 color width | 0          | 127       | set active color fill level     |
-| 02   | CC         | 07     | var    | IAC Driver Bus 1 |                   | Tube 07 color width | 0          | 127       | set active color fill level     |
-| 02   | CC         | 08     | var    | IAC Driver Bus 1 |                   | Tube 08 color width | 0          | 127       | set active color fill level     |
-| 02   | CC         | 09     | var    | IAC Driver Bus 1 |                   | Tube 09 color width | 0          | 127       | set active color fill level     |
-| 02   | CC         | 10     | var    | IAC Driver Bus 1 |                   | Tube 10 color width | 0          | 127       | set active color fill level     |
-| 02   | CC         | 11     | var    | IAC Driver Bus 1 |                   | Tube 11 color width | 0          | 127       | set active color fill level     |
-| 02   | CC         | 12     | var    | IAC Driver Bus 1 |                   | Tube 12 color width | 0          | 127       | set active color fill level     |
-| 02   | CC         | 13     | var    | IAC Driver Bus 1 |                   | Tube 13 color width | 0          | 127       | set active color fill level     |
-| 02   | CC         | 14     | var    | IAC Driver Bus 1 |                   | Tube 14 color width | 0          | 127       | set active color fill level     |
-| 02   | CC         | 15     | var    | IAC Driver Bus 1 |                   | Tube 15 color width | 0          | 127       | set active color fill level     |
-| 02   | CC         | 16     | var    | IAC Driver Bus 1 |                   | Tube 16 color width | 0          | 127       | set active color fill level     |
+| Chan | Event      | Byte 1 | Byte 2 | Device           | Path                 | Name                | Min Val    | Max Val   | Comments                        |
+| ---- | ---------- | ------ | ------ | ---------------- | -------------------- | ------------------- | ---------- | --------- | ------------------------------- |
+| 02   | CC         | 01     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 01 color width | 0          | 127       | set color fill dynamic size     |
+| 02   | CC         | 02     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 02 color width | 0          | 127       | set color fill dynamic size     |
+| 02   | CC         | 03     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 03 color width | 0          | 127       | set color fill dynamic size     |
+| 02   | CC         | 04     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 04 color width | 0          | 127       | set color fill dynamic size     |
+| 02   | CC         | 05     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 05 color width | 0          | 127       | set color fill dynamic size     |
+| 02   | CC         | 06     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 06 color width | 0          | 127       | set color fill dynamic size     |
+| 02   | CC         | 07     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 07 color width | 0          | 127       | set color fill dynamic size     |
+| 02   | CC         | 08     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 08 color width | 0          | 127       | set color fill dynamic size     |
+| 02   | CC         | 09     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 09 color width | 0          | 127       | set color fill dynamic size     |
+| 02   | CC         | 10     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 10 color width | 0          | 127       | set color fill dynamic size     |
+| 02   | CC         | 11     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 11 color width | 0          | 127       | set color fill dynamic size     |
+| 02   | CC         | 12     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 12 color width | 0          | 127       | set color fill dynamic size     |
+| 02   | CC         | 13     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 13 color width | 0          | 127       | set color fill dynamic size     |
+| 02   | CC         | 14     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 14 color width | 0          | 127       | set color fill dynamic size     |
+| 02   | CC         | 15     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 15 color width | 0          | 127       | set color fill dynamic size     |
+| 02   | CC         | 16     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 16 color width | 0          | 127       | set color fill dynamic size     |
 
-### Transport/Output Control (Ableton)
+### Transport/Output Control (Audio Host)
 
-| Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
-| ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
-| 03   | CC         | 01     | 127    | IAC Driver Bus 1 | Transport         | Start               |            |           | emulate press of START button   |
-| 03   | CC         | 02     | 127    | IAC Driver Bus 1 | Transport         | Stop                |            |           | emulate press of STOP button    |
-| 03   | CC         | 20     | 127    | IAC Driver Bus 1 | A-North \| Mixer  | Track Volume        | -40 dB     | -2.5 dB   | set surround fader position     |
-| 03   | CC         | 20     | 127    | IAC Driver Bus 1 | B-South \| Mixer  | Track Volume        | -40 dB     | -2.5 dB   | set surround fader position     |
+| Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                                    |
+| ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------------------- |
+| 03   | CC         | 01     | 127    | IAC Driver Bus 1 | Transport         | Start               |            |           | emulate press of START button               |
+| 03   | CC         | 02     | 127    | IAC Driver Bus 1 | Transport         | Stop                |            |           | emulate press of STOP button                |
+| 03   | CC         | 20     | 127    | IAC Driver Bus 1 | A-North \| Mixer  | Track Volume        | -40 dB     | -2.5 dB   | set track fader level for Daytime mode      |
+| 03   | CC         | 20     | 127    | IAC Driver Bus 1 | B-South \| Mixer  | Track Volume        | -40 dB     | -2.5 dB   | set track fader level for Daytime mode      |
+| 03   | CC         | 20     | 79     | IAC Driver Bus 1 | A-North \| Mixer  | Track Volume        | -40 dB     | -2.5 dB   | set track fader level for Nighttime mode    |
+| 03   | CC         | 20     | 79     | IAC Driver Bus 1 | B-South \| Mixer  | Track Volume        | -40 dB     | -2.5 dB   | set track fader level for Nighttime mode    |
+| 03   | CC         | 3      | 1      | IAC Driver Bus 1 | zb.fade FADE IN   |                     | 0          | 127       | fade IN (ON) Audio and Routing track levels |
+| 03   | CC         | 3      | 127    | IAC Driver Bus 1 | zb.fade FADE OUT  |                     | 0          | 127       | fade OUT (OFF) Audio and Routing mix levels |
 
-### Cue Control (MadMapper)
+### Cue Control (Pixel Mapping)
 
-| Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
-| ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
-| 04   | CC         | 03     | 127    | IAC Driver Bus 1 | Scene 01 (Chasin) |                     | 0          | 127       | select color combo for scene    |
-| 04   | CC         | 04     | 127    | IAC Driver Bus 1 | Scene 02 (Martin) |                     | 0          | 127       | select color combo for scene    |
+| Chan | Event      | Byte 1 | Byte 2 | Device           | Path                 | Name                | Min Val    | Max Val   | Comments                        |
+| ---- | ---------- | ------ | ------ | ---------------- | -------------------- | ------------------- | ---------- | --------- | ------------------------------- |
+| 04   | Note On    | 35     | 0      | IAC Driver Bus 1 | Scene 01 (Chasin)    |                     | 0          | 127       | recall scene                    |
+| 04   | Note On    | 47     | 0      | IAC Driver Bus 1 | Scene 02 (Martin)    |                     | 0          | 127       | recall scene                    |
+| 04   | Note On    | 48     | 1      | IAC Driver Bus 1 | Cue 02-1             |                     | 1          | 1         | cue recall                      |
+| 04   | Note On    | 59     | 0      | IAC Driver Bus 1 | Scene 03 (Carpenter) |                     | 0          | 0         | recall scene                    |
+| 04   | Note On    | 60     | 1      | IAC Driver Bus 1 | Cue 3-1              |                     | 1          | 1         | Village of the Damned           |
+| 04   | Note On    | 60     | 2      | IAC Driver Bus 1 | Cue 3-2              |                     | 2          | 2         | Halloween (2018 version)        |
+| 04   | Note On    | 60     | 3      | IAC Driver Bus 1 | Cue 3-3              |                     | 3          | 3         | Prince of Darkness              |
+| 04   | Note On    | 60     | 4      | IAC Driver Bus 1 | Cue 3-4              |                     | 4          | 4         | (Name)                          |
+| 04   | Note On    | 60     | 5      | IAC Driver Bus 1 | Cue 3-5              |                     | 5          | 5         | (Name)                          |
+| 04   | Note On    | 60     | 6      | IAC Driver Bus 1 | Cue 3-6              |                     | 6          | 6         | The Fog                         |
+| 04   | Note On    | 60     | 7      | IAC Driver Bus 1 | Cue 3-7              |                     | 7          | 7         | Weeping Ghost                   |
 
-### Scene Control (Ableton)
+### Scene Control (Audio Host)
 
-| Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
-| ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
-| 05   | CC         | 01     | 127    | IAC Driver Bus 1 | Scene 1 (Fade Out)|                     |            |           | trigger fade out scene          |
-| 05   | CC         | 03     | 127    | IAC Driver Bus 1 | Scene 3 (Chasin)  |                     |            |           | trigger scene                   |
-| 05   | CC         | 04     | 127    | IAC Driver Bus 1 | Scene 4 (Martin)  |                     |            |           | trigger scene                   |
+| Chan | Event      | Byte 1 | Byte 2 | Device           | Path                 | Name                | Min Val    | Max Val   | Comments                        |
+| ---- | ---------- | ------ | ------ | ---------------- | -------------------- | ------------------- | ---------- | --------- | ------------------------------- |
+| 05   | CC         | 03     | 127    | IAC Driver Bus 1 | Scene 3 (Chasin)     |                     |            |           | scene trigger                   |
+| 05   | CC         | 04     | 127    | IAC Driver Bus 1 | Scene 4 (Martin)     |                     |            |           | scene trigger                   |
+| 05   | CC         | 05     | 127    | IAC Driver Bus 1 | Scene 5 (Carpenter)  |                     |            |           | scene trigger                   |
 
 ## Appendix B – Event Automation  
 
@@ -508,4 +505,5 @@ _Note_: the Mac Mini running _Electric Forest_ utilizes a binary install of the 
 - ![#ea5670](https://placehold.co/32x32/cc000e/cc000e.png) `#cc000e - Background`
 
 - ![#fbd208](https://placehold.co/32x32/0000f2/0000f2.png) `#0000f2 - Foreground`
+
 
