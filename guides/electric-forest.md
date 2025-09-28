@@ -472,3 +472,40 @@ _Note_: the Mac Mini running _Electric Forest_ utilizes a binary install of the 
 
 - ![#fbd208](https://placehold.co/32x32/fbd208/fbd208.png) `#fbd208 - Foreground`
 
+### John Carpenter - Electric Forest
+
+- Cue 1 (Village of the Damned)
+- ![#ea5670](https://placehold.co/32x32/95d2fd/95d2fd.png) `#95d2fd - Background`
+
+- ![#fbd208](https://placehold.co/32x32/b92706/b92706.png) `#b92706 - Foreground`
+
+- Cue 2 (Halloween Main Theme 2018)
+- ![#ea5670](https://placehold.co/32x32/e19b13/e19b13.png) `#e19b13 - Background`
+
+- ![#fbd208](https://placehold.co/32x32/ff0000/ff0000.png) `#ff0000 - Foreground`
+
+- Cue 3 (Prince of Darkness Main Theme)
+- ![#ea5670](https://placehold.co/32x32/aa1a21/aa1a21.png) `#aa1a21 - Background`
+
+- ![#fbd208](https://placehold.co/32x32/6bba2c/6bba2c.png) `#6bba2c - Foreground`
+
+- Cue 4 (The Shape Hunts Allyson)
+- ![#ea5670](https://placehold.co/32x32/bb6e2e/bb6e2e.png) `#bb6e2e - Background`
+
+- ![#fbd208](https://placehold.co/32x32/92b0bb/92b0bb.png) `#92b0bb - Foreground`
+
+- Cue 5 (Christine Main Theme)
+- ![#ea5670](https://placehold.co/32x32/5a9f96/5a9f96.png) `#5a9f96 - Background`
+
+- ![#fbd208](https://placehold.co/32x32/c5140e/c5140e.png) `#c5140e - Foreground`
+
+- Cue 6 (The Fog Main Theme)
+- ![#ea5670](https://placehold.co/32x32/80d5e5/80d5e5.png) `#80d5e5 - Background`
+
+- ![#fbd208](https://placehold.co/32x32/00ff08/00ff08.png) `#00ff08 - Foreground`
+
+- Cue 7 (Weeping Ghost)
+- ![#ea5670](https://placehold.co/32x32/cc000e/cc000e.png) `#cc000e - Background`
+
+- ![#fbd208](https://placehold.co/32x32/0000f2/0000f2.png) `#0000f2 - Foreground`
+
