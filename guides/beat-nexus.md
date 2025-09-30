@@ -71,9 +71,9 @@ The touch-controllers inside these side-cases can be reset using remote-controls
 
 #### Accessing Touch Controllers
 
-__IMPORTANT NOTE #1__: These cases are mounted at an angle. Care must be taken that, when removing the cover ,the cover does not slide down or fall off, thus damaging the cables connected to it.
+__IMPORTANT NOTE #1__: These cases are mounted at an angle. Care must be taken that, when removing the cover, the cover does not slide down or fall off, thus damaging the cables connected to it.
 
-__IMPORTANT NOTE #2__: SHort cables are connected to the front covers of these cases. The covers __CANNOT__ be lifted off and set aside. YOU MUST PREPARE A TABLE OR STOOL IMMEDIATELY TO THE __RIGHT__ OF THE CASE YOU ARE OPENING where you will put the cover of the case so that its short cables are not damaged.
+__IMPORTANT NOTE #2__: Sort cables are connected to the front covers of these cases. The covers ___CANNOT___ be lifted off and set aside. YOU MUST PREPARE A TABLE OR STOOL IMMEDIATELY TO THE __RIGHT__ OF THE CASE YOU ARE OPENING where you will put the cover of the case so that its short cables are not damaged.
 
 Opening the case:
 
