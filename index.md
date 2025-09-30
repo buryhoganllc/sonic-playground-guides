@@ -4,7 +4,7 @@ layout: default
 permalink: /
 ---
 
-# Sonic Playground Operating Guides
+## Sonic Playground Operating Guides
 
 Welcome to the home of operating guides and technical manuals for select interactive exhibits featured in _Sonic Playground_.  
 The interactives represented here were designed by Brendan Hogan of Bury, Hogan & Associates LLC, in collaboration with [GRAMMY Museum](https://www.grammymuseum.org/) and [Curious Beast](https://www.curiousbeast.org).  
