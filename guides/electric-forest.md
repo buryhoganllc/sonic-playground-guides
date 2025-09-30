@@ -4,7 +4,7 @@ layout: default
 permalink: /electric-forest/
 ---
 
-## Electric Forest Operating Guide - updated 8/26/2025
+## Electric Forest Operating Guide - updated 9/30/2025
 
 ## Sonic Playground - GRAMMY Museum
 
@@ -44,34 +44,40 @@ _Electric Forest_ is hosted on an M2 Pro Mac Mini and runs 24/7 in a permanent a
 
 ### Scene Changes (Light and Sound cues)  
 
-_Electric Forest_ is programmed to cycle between two music scenes:  
+___As of 9/30/25,___ _Electric Forest_ is programmed to cycle between two music scenes on the hour, and three-quarter hour.  
 
-1. “Movements” – Shaun Chasin’s original composition
+1. John Carpenter mix ("March of the Children," "Halloween Main Theme," "Prince of Darkness Main Theme," "The Shape Hunts Allyson," "Christine Main Theme," "The Fog Main Theme," "Weeping Ghost."
 2. Max Martin mix (“Baby One More Time,” “Since You’ve Been Gone,” “Everybody”)
 
-Through `Power Manager` events, the Chasin set will be triggered hourly between 11AM and 5PM SUNDAY-FRIDAY, and between 10AM and 6PM SATURDAY.  
+Through `Power Manager` events, the Carpenter set will be triggered hourly between 11AM and 4PM SUNDAY-FRIDAY, and between 10AM and 5PM SATURDAY.  
 
 The Martin mix will be triggered on the three-quarter hour between 11:45AM and 4:45PM SUNDAY-FRIDAY, and between 10:45AM and 5:45PM SATURDAY.  
 
+At 5PM SUNDAY-FRIDAY, and 6PM SATURDAY, Shaun Chasin's original composition "Movements" will be triggered and will play overnight during the closed hours of the Museum.
+
+30 minutes after the normal closing time, the surround stereo pairs will enter "Nighttime Mode" and dim approximately 10 dB. The surrounds will restore to normal level ("Daytime Mode") 30 minutes before the normal opening time of the Museum.
+
 An example schedule of a typical open day such as Friday:  
 
-- 11:00AM – Chasin
-- 11:45AM – Martin
-- 12:00PM – Chasin
-- 12:45PM – Martin
-- 1:00PM – Chasin
-- 1:45PM – Martin
-- 2:00PM – Chasin
-- 2:45PM – Martin
-- 3:00PM – Chasin
-- 3:45PM – Martin
-- 4:00PM – Chasin
-- 4:45PM – Martin
-- 5:00PM – Chasin (Chasin continues overnight at a lower level – see Volume Control)
+- 10:30AM -> surround stereo pairs go into “Daytime Mode” and bump up approximately 10 dB
+- 11:00AM -> Carpenter playlist (seven tracks, each track has a different lighting look, runtime a bit over 20 minutes)
+- 11:45AM -> Martin mix (three songs in a combined track, one lighting look, about 8 minutes)
+- 12:00PM -> Carpenter
+- 12:45PM -> Martin
+- 1:00PM   -> Carpenter
+- 1:45PM   -> Martin
+- 2:00PM   -> Carpenter
+- 2:45PM   -> Martin
+- 3:00PM   -> Carpenter
+- 3:45PM   -> Martin
+- 4:00PM   -> Carpenter
+- 4:45PM   -> Martin
+- 5:00PM   -> Chasin mix (our “normal” soundtrack, plays continuously over night)
+- 5:30PM   -> surround stereo pairs go to “Nighttime Mode” and drop approximately 10 dB. See _Volume Control_ section below.
   
 When a scene event is triggered, the current playing audio fades out to silence over six (6) seconds as the tubes change color to the next look.
 The cued scene music will then begin playing. Audio is effectively continuous throughout the day. `MadMapper` will advance tube lighting scenes in synchronicity with Ableton, changing foreground and background colors.  
-Manual scene changes are achieved via the Power Manager menu bar icon by selecting the appropriate “On Demand” event, such as “Ableton-Shaun Chasin.” See Appendix B for more information.  
+Manual scene changes are achieved via the Power Manager menu bar icon by selecting the appropriate “On Demand” event, such as “Ableton-Shaun Chasin.” See _Appendix B_ for more information.  
 
 ### Volume Control  
 
@@ -505,6 +511,7 @@ _Note_: the Mac Mini running _Electric Forest_ utilizes a binary install of the 
 - ![#ea5670](https://placehold.co/32x32/cc000e/cc000e.png) `#cc000e - Background`
 
 - ![#fbd208](https://placehold.co/32x32/0000f2/0000f2.png) `#0000f2 - Foreground`
+
 
 
 
