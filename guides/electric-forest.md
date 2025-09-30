@@ -8,7 +8,7 @@ permalink: /electric-forest/
 
 ## Sonic Playground - GRAMMY Museum
 
-It is recommended that this guide be read in its entirety before changes are made to the _Electric Forest_.
+Please read this guide in its entirety before making changes to the _Electric Forest._
 
 ## Overview  
 
@@ -217,7 +217,7 @@ The event list is as follows:
 
 ### Track Volume Control (Audio Host)
 
-| Chan | Event      | Byte 1 | Byte 2 | Device           | Path                              | Name                | Min Val    | Max Val   | Comments                        |
+| Chan | Message    | Byte 1 | Byte 2 | Device           | Path                              | Name                | Min Val    | Max Val   | Comments                        |
 | ---- | ---------- | ------ | ------ | ---------------- | --------------------------------- | ------------------- | ---------- | --------- | ------------------------------- |
 | 01   | CC         | 01     | var    | from max 1       | Max -> Ableton: 01-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
 | 01   | CC         | 02     | var    | from max 1       | Max -> Ableton: 02-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      | set track fader level           |
@@ -238,7 +238,7 @@ The event list is as follows:
 
 ### Lighting Control (Pixel Mapping)
 
-| Chan | Event      | Byte 1 | Byte 2 | Device           | Path                 | Name                | Min Val    | Max Val   | Comments                        |
+| Chan | Message    | Byte 1 | Byte 2 | Device           | Path                 | Name                | Min Val    | Max Val   | Comments                        |
 | ---- | ---------- | ------ | ------ | ---------------- | -------------------- | ------------------- | ---------- | --------- | ------------------------------- |
 | 02   | CC         | 01     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 01 color width | 0          | 127       | set color fill dynamic size     |
 | 02   | CC         | 02     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 02 color width | 0          | 127       | set color fill dynamic size     |
@@ -259,7 +259,7 @@ The event list is as follows:
 
 ### Transport/Output Control (Audio Host)
 
-| Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                                    |
+| Chan | Message    | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                                    |
 | ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------------------- |
 | 03   | CC         | 01     | 127    | IAC Driver Bus 1 | Transport         | Start               |            |           | emulate press of START button               |
 | 03   | CC         | 02     | 127    | IAC Driver Bus 1 | Transport         | Stop                |            |           | emulate press of STOP button                |
@@ -272,7 +272,7 @@ The event list is as follows:
 
 ### Cue Control (Pixel Mapping)
 
-| Chan | Event      | Byte 1 | Byte 2 | Device           | Path                 | Name                | Min Val    | Max Val   | Comments                        |
+| Chan | Message    | Byte 1 | Byte 2 | Device           | Path                 | Name                | Min Val    | Max Val   | Comments                        |
 | ---- | ---------- | ------ | ------ | ---------------- | -------------------- | ------------------- | ---------- | --------- | ------------------------------- |
 | 04   | Note On    | 35     | 0      | IAC Driver Bus 1 | Scene 01 (Chasin)    |                     | 0          | 127       | recall scene                    |
 | 04   | Note On    | 47     | 0      | IAC Driver Bus 1 | Scene 02 (Martin)    |                     | 0          | 127       | recall scene                    |
@@ -288,7 +288,7 @@ The event list is as follows:
 
 ### Scene Control (Audio Host)
 
-| Chan | Event      | Byte 1 | Byte 2 | Device           | Path                 | Name                | Min Val    | Max Val   | Comments                        |
+| Chan | Message    | Byte 1 | Byte 2 | Device           | Path                 | Name                | Min Val    | Max Val   | Comments                        |
 | ---- | ---------- | ------ | ------ | ---------------- | -------------------- | ------------------- | ---------- | --------- | ------------------------------- |
 | 05   | CC         | 03     | 127    | IAC Driver Bus 1 | Scene 3 (Chasin)     |                     |            |           | scene trigger                   |
 | 05   | CC         | 04     | 127    | IAC Driver Bus 1 | Scene 4 (Martin)     |                     |            |           | scene trigger                   |
