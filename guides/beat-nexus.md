@@ -61,11 +61,11 @@ The side-cases of Beat Nexus house an `Erae` touch-controller and two (2) triang
 
 ![Harmony station.]({{ '/assets/images/BN_Harmony.jpeg' | relative_url }})
 
-!Rhythm station.]({{ '/assets/images/BN_Rhythm.jpeg' | relative_url }})
+![Rhythm station.]({{ '/assets/images/BN_Rhythm.jpeg' | relative_url }})
 
-!Melody station.]({{ '/assets/images/BN_Melody.jpeg' | relative_url }})
+![Melody station.]({{ '/assets/images/BN_Melody.jpeg' | relative_url }})
 
-!Bass station.]({{ '/assets/images/BN_Bass.jpeg' | relative_url }})
+![Bass station.]({{ '/assets/images/BN_Bass.jpeg' | relative_url }})
 
 The touch-controllers inside these side-cases can be reset using remote-controls and so it should be a rare situation when these cases need to be opened.
 
