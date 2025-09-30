@@ -4,7 +4,7 @@ layout: default
 permalink: /electric-forest/
 ---
 
-## Electric Forest Operating Guide - updated 8/26/2025
+## Electric Forest Operating Guide - updated 9/30/2025
 
 ## Sonic Playground - GRAMMY Museum
 
@@ -17,9 +17,8 @@ It is recommended that this guide be read in its entirety before changes are mad
 _Electric Forest_ utilizes `Max`, `Ableton`, and `MadMapper` show files to host the sensor controls, audio playback, and LED behavior, respectively. _Electric Forest_ runs on macOS systems. Show files exist in the “ELECTRIC FOREST SHOW FILES” folder on the Desktop.  
 
 - Max: `~/Desktop/ELECTRIC FOREST SHOW FILES/Max/ElectricForest_VINT_v6_ratioTEST-InactTEST-vSC_012025v2.maxpat`
-- Ableton: `~/Desktop/ELECTRIC FOREST SHOW FILES/Ableton/MultShow File/ElectricForest_v200_MultiShow_v2.als`
-- MadMapper: `~/Desktop/ELECTRIC FOREST SHOW FILES/MadMapper/ElectricForest_MultiShow.mad`
-- Automation scripts: `~/Desktop/ELECTRIC FOREST SHOW FILES/Automation` (See Appendix B)
+- Ableton: `~/Desktop/ELECTRIC FOREST SHOW FILES/Ableton/ElectricForest_v300_MultiShow_v2/ElectricForest_v300_Multishow_v2.als`
+- MadMapper: `~/Desktop/ELECTRIC FOREST SHOW FILES/MadMapper/Version 3/ElectricForest_MultiShow_v3.mad`
 
 ### Standard Behavior  
 
@@ -29,7 +28,7 @@ _Electric Forest_ runs 24/7 and requires limited user intervention. Show files m
 - `2 - ABLETON`
 - `3 - MADMAPPER`
 
-Allow each application to fully load before launching the next file. Once that is complete, hide `Max` and `MadMapper`, then select the desired `Ableton` scene from the `Power Manager` menu bar list (see Scene Changes below.)  
+Allow each application to fully load before launching the next file. Once that is complete, hide `Max` and `MadMapper`, then select the desired `Ableton` scene from the `Power Manager` scheduled events list (see Scene Changes below). Leave `Power Manager` as the topmost application window.
 
 ### Version Control  
 
@@ -44,34 +43,40 @@ _Electric Forest_ is hosted on an M2 Pro Mac Mini and runs 24/7 in a permanent a
 
 ### Scene Changes (Light and Sound cues)  
 
-_Electric Forest_ is programmed to cycle between two music scenes:  
+___As of 9/30/25,___ _Electric Forest_ is programmed to cycle between two music scenes on the hour, and three-quarter hour.  
 
-1. “Movements” – Shaun Chasin’s original composition
+1. John Carpenter mix ("March of the Children," "Halloween Main Theme," "Prince of Darkness Main Theme," "The Shape Hunts Allyson," "Christine Main Theme," "The Fog Main Theme," "Weeping Ghost."
 2. Max Martin mix (“Baby One More Time,” “Since You’ve Been Gone,” “Everybody”)
 
-Through `Power Manager` events, the Chasin set will be triggered hourly between 11AM and 5PM SUNDAY-FRIDAY, and between 10AM and 6PM SATURDAY.  
+Through `Power Manager` events, the Carpenter set will be triggered hourly between 11AM and 4PM SUNDAY-FRIDAY, and between 10AM and 5PM SATURDAY.  
 
 The Martin mix will be triggered on the three-quarter hour between 11:45AM and 4:45PM SUNDAY-FRIDAY, and between 10:45AM and 5:45PM SATURDAY.  
 
+At 5PM SUNDAY-FRIDAY, and 6PM SATURDAY, Shaun Chasin's original composition "Movements" will be triggered and will play overnight during the closed hours of the Museum.
+
+30 minutes after the normal closing time, the surround stereo pairs will enter "Nighttime Mode" and dim approximately 10 dB. The surrounds will restore to normal level ("Daytime Mode") 30 minutes before the normal opening time of the Museum.
+
 An example schedule of a typical open day such as Friday:  
 
-- 11:00AM – Chasin
-- 11:45AM – Martin
-- 12:00PM – Chasin
-- 12:45PM – Martin
-- 1:00PM – Chasin
-- 1:45PM – Martin
-- 2:00PM – Chasin
-- 2:45PM – Martin
-- 3:00PM – Chasin
-- 3:45PM – Martin
-- 4:00PM – Chasin
-- 4:45PM – Martin
-- 5:00PM – Chasin (Chasin continues overnight at a lower level – see Volume Control)
+- 10:30AM -> surround stereo pairs go into “Daytime Mode” and bump up approximately 10 dB
+- 11:00AM -> Carpenter playlist (seven tracks, each track has a different lighting look, runtime a bit over 20 minutes)
+- 11:45AM -> Martin mix (three songs in a combined track, one lighting look, about 8 minutes)
+- 12:00PM -> Carpenter
+- 12:45PM -> Martin
+- 1:00PM  -> Carpenter
+- 1:45PM  -> Martin
+- 2:00PM  -> Carpenter
+- 2:45PM  -> Martin
+- 3:00PM  -> Carpenter
+- 3:45PM  -> Martin
+- 4:00PM  -> Carpenter
+- 4:45PM  -> Martin
+- 5:00PM  -> Chasin mix (our “normal” soundtrack, plays continuously over night)
+- 5:30PM  -> surround stereo pairs go to “Nighttime Mode” and drop approximately 10 dB. See _Volume Control_ section below.
   
 When a scene event is triggered, the current playing audio fades out to silence over six (6) seconds as the tubes change color to the next look.
 The cued scene music will then begin playing. Audio is effectively continuous throughout the day. `MadMapper` will advance tube lighting scenes in synchronicity with Ableton, changing foreground and background colors.  
-Manual scene changes are achieved via the Power Manager menu bar icon by selecting the appropriate “On Demand” event, such as “Ableton-Shaun Chasin.” See Appendix B for more information.  
+Manual scene changes are achieved via the `Power Manager` application window's Schedule list by selecting the appropriate “On Demand” event, such as `Ableton-Shaun Chasin.` See _Appendix B_ for more information.  
 
 ### Volume Control  
 
@@ -95,21 +100,21 @@ _Electric Forest_ is constructed to run autonomously, with manual intervention r
 
 ### Changing Ableton Behavior (song lists and volume states)  
 
-To change between the Shaun Chasin and Max Martin music sets on-demand, select the appropriate On Demand `Power Manager` event from the scheduler list by clicking the ![Power Manager macOS menu bar icon.]({{ '/assets/images/PM_menuBar.png' | relative_url }})   `Actions` menu and selecting `Perform.`  
+To change between the Shaun Chasin and Max Martin music sets on-demand, select the appropriate On Demand `Power Manager` event from the scheduler list by clicking the `Actions` menu and selecting `Perform.`  
 
 ![Power Manager on-demand list from menu bar.]({{ '/assets/images/PM_SchedulerView.png' | relative_url }})  
 
-Selecting `“_Ableton-Max Martin_”` , `“_Ableton-Shaun Chasin_”` , or `"_Ableton-John Carpenter_"` will fade out the currently playing audio, crossfade the lights to the new cue, and then begin playback of the selected song mix.  
+Selecting `Ableton-Max Martin` , `Ableton-Shaun Chasin` , or `Ableton-John Carpenter` will fade out the currently playing audio, crossfade the lights to the new cue, and then begin playback of the selected song mix.  
 
-You may also change the surround output level on-demand by selecting either `“_Ableton-Volume Daytime Mode_”` (normal volume) or `“_Ableton-Volume Nighttime Mode_”` (dimmed output, approximately 10 dB lower.)  
+You may also change the surround output level on-demand by selecting either `Ableton-Volume Daytime Mode` (normal volume) or `Ableton-Volume Nighttime Mode` (dimmed output, approximately 10 dB lower.)  
 
 ### Overriding Scheduled Events  
 
 At times it may be necessary to manually trigger a music set/volume level keep it running beyond the point when the next scheduled event would occur (media days, special events, etc.)
 To override scheduled events, navigate to the `Power Manager` List View and un-check the appropriate Scheduled event.  
 
-For example, to set the Martin mix on-demand and prevent scheduled scene transitions to the Chasin mix, first select `“Ableton-Max Martin”` from the On Demand list (see above).  
-Next, uncheck the `“_Shaun Chasin – Hourly_”` entry in the `Power Manager` Scheduler list:  
+For example, to set the Martin mix on-demand and prevent scheduled scene transitions to the Chasin mix, first select `Ableton-Max Martin` from the On Demand list (see above).  
+Next, uncheck the `Shaun Chasin – Hourly` entry in the `Power Manager` Scheduler list:  
 
 ![Power Manager cancelling scheduled events.]({{ '/assets/images/PM_ListView.png' | relative_url }})  
 
@@ -181,7 +186,7 @@ Conduct a full power cycle of the system:
   - 2 - ABLETON
   - 3 - MADMAPPER
 - __Allow each application to fully boot before moving on to the next one.__
-- Lastly, begin playback in Ableton by running one of the `Power Manager` events (`“_Ableton-Shaun Chasin_”` for example) to begin audio playback and set the tube lighting into the desired configuration.
+- Lastly, begin playback in Ableton by running one of the `Power Manager` events (`Ableton-Shaun Chasin` for example) to begin audio playback and set the tube lighting into the desired configuration.
 
 ### One or more loudspeakers do not appear to be working  
 
@@ -505,6 +510,9 @@ _Note_: the Mac Mini running _Electric Forest_ utilizes a binary install of the 
 - ![#ea5670](https://placehold.co/32x32/cc000e/cc000e.png) `#cc000e - Background`
 
 - ![#fbd208](https://placehold.co/32x32/0000f2/0000f2.png) `#0000f2 - Foreground`
+
+
+
 
 
 
