@@ -4,11 +4,11 @@ layout: default
 permalink: /intuiface/
 ---
 
-## Intuiface Systems Operating Guide - 08/26/2025
+## Intuiface Systems Operating Guide - 09/30/2025
 
 ## Sonic Playground - GRAMMY Museum
 
-It is recommended that you read the entirety of this operating guide before making changes to Intuiface systems.
+Please read this guide in its entirety before making changes to Intuiface systems.
 
 ## Automated Startup and Shutdown
 
@@ -44,7 +44,7 @@ When troubleshooting a physical system issue, direct access is recommended.
 
 ### Authentication
 
-All admin accounts on the host machines use the admin credentials. A kiosk mode accout (`sp-show`) runs by default. Refer to the `Credentials.txt` file for more information.
+All admin accounts on the host machines use the admin credentials. A kiosk mode account (`sp-show`) runs by default. Refer to the `Credentials.txt` file for more information.
 
 #### Jump Desktop Configuration
 
@@ -77,7 +77,7 @@ If the secondary display surface (the Samsung television) does not automatically
 
 - Turn on the television manually via the power button under the lower right bezel, or via the remote control in Curatorial labeled “Samsung DU7200.”
 - Locate the appropriate Logitech controller and press the `Function` and `F11` keys simultaneously (`FN` + `F11`).
-- This will cycle display modes, and you will see the Attract screen appear on the television.
+- This will cycle display modes, and you will see the Attract screen appear on the television. Continue to cycle through display modes until the correct layout is achieved.
 
 #### Via Jump Desktop
 
