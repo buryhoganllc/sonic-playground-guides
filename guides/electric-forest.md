@@ -63,16 +63,16 @@ An example schedule of a typical open day such as Friday:
 - 11:45AM -> Martin mix (three songs in a combined track, one lighting look, about 8 minutes)
 - 12:00PM -> Carpenter
 - 12:45PM -> Martin
-- 1:00PM  -> Carpenter
-- 1:45PM  -> Martin
-- 2:00PM  -> Carpenter
-- 2:45PM  -> Martin
-- 3:00PM  -> Carpenter
-- 3:45PM  -> Martin
-- 4:00PM  -> Carpenter
-- 4:45PM  -> Martin
-- 5:00PM  -> Chasin mix (our “normal” soundtrack, plays continuously over night)
-- 5:30PM  -> surround stereo pairs go to “Nighttime Mode” and drop approximately 10 dB. See _Volume Control_ section below.
+- 1:00PM   -> Carpenter
+- 1:45PM   -> Martin
+- 2:00PM   -> Carpenter
+- 2:45PM   -> Martin
+- 3:00PM   -> Carpenter
+- 3:45PM   -> Martin
+- 4:00PM   -> Carpenter
+- 4:45PM   -> Martin
+- 5:00PM   -> Chasin mix (our “normal” soundtrack, plays continuously over night)
+- 5:30PM   -> surround stereo pairs go to “Nighttime Mode” and drop approximately 10 dB. See _Volume Control_ section below.
   
 When a scene event is triggered, the current playing audio fades out to silence over six (6) seconds as the tubes change color to the next look.
 The cued scene music will then begin playing. Audio is effectively continuous throughout the day. `MadMapper` will advance tube lighting scenes in synchronicity with Ableton, changing foreground and background colors.  
@@ -281,8 +281,8 @@ The event list is as follows:
 | 04   | Note On    | 60     | 1      | IAC Driver Bus 1 | Cue 3-1              |                     | 1          | 1         | Village of the Damned           |
 | 04   | Note On    | 60     | 2      | IAC Driver Bus 1 | Cue 3-2              |                     | 2          | 2         | Halloween (2018 version)        |
 | 04   | Note On    | 60     | 3      | IAC Driver Bus 1 | Cue 3-3              |                     | 3          | 3         | Prince of Darkness              |
-| 04   | Note On    | 60     | 4      | IAC Driver Bus 1 | Cue 3-4              |                     | 4          | 4         | (Name)                          |
-| 04   | Note On    | 60     | 5      | IAC Driver Bus 1 | Cue 3-5              |                     | 5          | 5         | (Name)                          |
+| 04   | Note On    | 60     | 4      | IAC Driver Bus 1 | Cue 3-4              |                     | 4          | 4         | The Shape Hunts Allyson         |
+| 04   | Note On    | 60     | 5      | IAC Driver Bus 1 | Cue 3-5              |                     | 5          | 5         | Christine                       |
 | 04   | Note On    | 60     | 6      | IAC Driver Bus 1 | Cue 3-6              |                     | 6          | 6         | The Fog                         |
 | 04   | Note On    | 60     | 7      | IAC Driver Bus 1 | Cue 3-7              |                     | 7          | 7         | Weeping Ghost                   |
 
@@ -403,9 +403,7 @@ Scheduled events such as `Ableton` scene changes execute shell scripts, such as 
 
 ```bash
 #!/bin/bash
-# Example of multi-command MIDI script
 # Run Shaun Chasin "Movements" mix and set lights
-# Uncomment the correct path to your sendmidi install location:
 # Intel Macs from Homebrew
 #path=/usr/local/Cellar/sendmidi
 # Apple Silicon Macs from Homebrew
@@ -413,23 +411,27 @@ Scheduled events such as `Ableton` scene changes execute shell scripts, such as 
 # Binary installs
 path=/usr/local/bin/sendmidi
 #
-cmd1="dev IAC Driver Bus 1 ch 5 cc 1 127" # fade out audio
-cmd2="dev IAC Driver Bus 1 ch 4 cc 3 127" # LED scene 1
+cmd1="dev IAC Driver Bus 1 ch 3 cc 3 127" # fade out audio
+cmd2="dev IAC Driver Bus 1 ch 4 note on 35 0" # LED scene 1
 cmd3="dev IAC Driver Bus 1 ch 5 cc 3 127" # Shaun Chasin mix
 cmd4="dev IAC Driver Bus 1 ch 3 cc 2 127" # stop transport
+cmd5="dev IAC Driver BUs 1 ch 3 cc 3 1" # fade in audio
 #
 midiEvent1="$path $cmd1"
 midiEvent2="$path $cmd2"
 midiEvent3="$path $cmd3"
 midiEvent4="$path $cmd4"
+midiEvent5="$path $cmd5"
 #
 eval "$midiEvent1"
 eval "$midiEvent2"
 sleep 6
 eval "$midiEvent4"
 sleep 0.1
+eval "$midiEvent5"
+sleep 0.1
 eval "$midiEvent4"
-sleep 0.4
+sleep 0.2
 eval "$midiEvent3"
 exit 0;
 ```
