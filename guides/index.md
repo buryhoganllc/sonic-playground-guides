@@ -12,6 +12,6 @@ permalink: /guides/
 
 ### Intuiface Systems
 
-_Music for Film & TV, Music for Video Games, Voice Acting_
+Music for Film & TV, Music for Video Games, Voice Acting
 
 - [Intuiface Systems Operating Guide]({{ site.baseurl }}/intuiface/)
