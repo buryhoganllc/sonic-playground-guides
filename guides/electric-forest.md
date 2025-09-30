@@ -76,7 +76,7 @@ An example schedule of a typical open day such as Friday:
   
 When a scene event is triggered, the current playing audio fades out to silence over six (6) seconds as the tubes change color to the next look.
 The cued scene music will then begin playing. Audio is effectively continuous throughout the day. `MadMapper` will advance tube lighting scenes in synchronicity with Ableton, changing foreground and background colors.  
-Manual scene changes are achieved via the Power Manager menu bar icon by selecting the appropriate “On Demand” event, such as “Ableton-Shaun Chasin.” See _Appendix B_ for more information.  
+Manual scene changes are achieved via the `Power Manager` application window's Schedule list by selecting the appropriate “On Demand” event, such as `Ableton-Shaun Chasin.` See _Appendix B_ for more information.  
 
 ### Volume Control  
 
@@ -510,6 +510,7 @@ _Note_: the Mac Mini running _Electric Forest_ utilizes a binary install of the 
 - ![#ea5670](https://placehold.co/32x32/cc000e/cc000e.png) `#cc000e - Background`
 
 - ![#fbd208](https://placehold.co/32x32/0000f2/0000f2.png) `#0000f2 - Foreground`
+
 
 
 
