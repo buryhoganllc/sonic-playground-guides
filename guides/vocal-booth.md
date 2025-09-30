@@ -10,9 +10,13 @@ permalink: /vocal-booth/
 
 Please read this guide in its entirety before making changes to the _Vocal Booth._
 
+![Vocal Booth attract mode.]({{ '/assets/images/VB_Attract.jpeg' | relative_url }})
+
 ## BASICS
 
-The _Vocal Booth's_ computer is working properly when pressing the red `START OVER` button returns teh video screen to the `YOU CAN SING` splash-screen, and then pressing the green `PLAY` button begins playing a video of the virtual host.  
+The _Vocal Booth's_ computer is working properly when pressing the red `START OVER` button returns teh video screen to the `YOU CAN SING` splash-screen, and then pressing the green `PLAY` button begins playing a video of the virtual host.
+
+![Vocal Booth virtual host.]({{ '/assets/images/VB_Welcome.jpeg' | relative_url }})
 
 There should be two (2) microphones on stands in the room, one for `VOCAL EFFECTS A` coming from the bottom of the left side of the console, and one for `VOCAL EFFECTS B` coming from the bottom of the right side of the console. One or more pairs of headphones associated with each side (2-4 pairs total) should also be connected ot the associated side of the bottom of the console.  
 
