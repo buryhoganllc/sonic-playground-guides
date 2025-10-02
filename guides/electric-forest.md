@@ -43,14 +43,9 @@ _Electric Forest_ is hosted on an M2 Pro Mac Mini and runs 24/7 in a permanent a
 
 ### Scene Changes (Light and Sound cues)  
 
-___As of 9/30/25,___ _Electric Forest_ is programmed to cycle between two music scenes on the hour, and three-quarter hour.  
+___As of 10/01/25,___ _Electric Forest_ is programmed perform the John Carpenter mix during open hours, and the Shaun Chasin mix during closed hours.
 
-1. John Carpenter mix ("March of the Children," "Halloween Main Theme," "Prince of Darkness Main Theme," "The Shape Hunts Allyson," "Christine Main Theme," "The Fog Main Theme," "Weeping Ghost."
-2. Max Martin mix (“Baby One More Time,” “Since You’ve Been Gone,” “Everybody”)
-
-Through `Power Manager` events, the Carpenter set will be triggered hourly between 11AM and 4PM SUNDAY-FRIDAY, and between 10AM and 5PM SATURDAY.  
-
-The Martin mix will be triggered on the three-quarter hour between 11:45AM and 4:45PM SUNDAY-FRIDAY, and between 10:45AM and 5:45PM SATURDAY.  
+Through `Power Manager` events, the Carpenter set will be triggered at 11AM SUNDAY-FRIDAY, and at 10AM SATURDAY.  
 
 At 5PM SUNDAY-FRIDAY, and 6PM SATURDAY, Shaun Chasin's original composition "Movements" will be triggered and will play overnight during the closed hours of the Museum.
 
@@ -60,17 +55,6 @@ An example schedule of a typical open day such as Friday:
 
 - 10:30AM -> surround stereo pairs go into “Daytime Mode” and bump up approximately 10 dB
 - 11:00AM -> Carpenter playlist (seven tracks, each track has a different lighting look, runtime a bit over 20 minutes)
-- 11:45AM -> Martin mix (three songs in a combined track, one lighting look, about 8 minutes)
-- 12:00PM -> Carpenter
-- 12:45PM -> Martin
-- 1:00PM   -> Carpenter
-- 1:45PM   -> Martin
-- 2:00PM   -> Carpenter
-- 2:45PM   -> Martin
-- 3:00PM   -> Carpenter
-- 3:45PM   -> Martin
-- 4:00PM   -> Carpenter
-- 4:45PM   -> Martin
 - 5:00PM   -> Chasin mix (our “normal” soundtrack, plays continuously over night)
 - 5:30PM   -> surround stereo pairs go to “Nighttime Mode” and drop approximately 10 dB. See _Volume Control_ section below.
   
