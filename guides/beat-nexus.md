@@ -20,7 +20,7 @@ Each individual side of `Beat Nexus` will "time out" after a set number of secon
 
 `Beat Nexus` runs on a Mac Mini, running one (1) piece of software: `Ableton Live 12 Suite`. There are four (4) touch-controllers connected to the computer by USB cables. Most issues can be solved by:
 
-1. Restarting the Mac Mini, which can be accomplished remotely via _Jump Desktop._
+1. Restarting the Mac Mini, which can be accomplished remotely via `Jump Desktop.`
 2. Restarting `Ableton Live` and opening the recent document with the words `RUN FOR SHOW` in the file name.
 3. Restarting the touch-controllers, which can be done with remote-controls which switch the touch-controller's USB data and power connections off and back on.
 
@@ -36,7 +36,7 @@ The center-case of `Beat Nexus` contains the computer, audio interface, and othe
 
 1. Remove (as many as eight) Phillips-head screws from underneath the white part of the case.
 2. Life the top part of the case straight up and carefully set it aside.
-3. There is a large white panel covered in electronics that must be partially disconnected and moved aside in order to access the internals below it. Note that the multicolored wires coming from this panel are short and ___CANNOT___ be disconnected. Disconnected only the "barrel" type power connected on this panel. Slightly lift this panel, rotate it around the point where the multicolored cables connect to it, and set it partly aside to access the internals.
+3. There is a large white panel covered in electronics that must be partially disconnected and moved aside in order to access the internals below it. Note that the multicolored wires coming from this panel are short and ___CANNOT___ be disconnected. Disconnect only the "barrel" type power connected on this panel. Slightly lift this panel, rotate it around the point where the multicolored cables connect to it, and set it partly aside to access the internals.
 
 ### System Components
 
