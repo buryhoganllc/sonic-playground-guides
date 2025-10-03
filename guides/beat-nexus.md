@@ -93,6 +93,5 @@ The Mac Mini system settings for `Login Items & Extensions` are instructed to `O
 
 `Power Manager` runs in the background and performs the following timed operations:
 
-- 01:00AM - runs an application called `Ableton_Kill.app` which quits the `Ableton Live` software
-- 01:02AM - shuts down the computer
-- 06:00AM - boots the computer
+- 06:00AM - runs an application called `Ableton_Kill.app` which quits the `Ableton Live` software
+- 06:10AM - restart the computer
