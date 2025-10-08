@@ -17,7 +17,7 @@ Please read this guide in its entirety before making changes to the _Electric Fo
 _Electric Forest_ utilizes `Max`, `Ableton`, and `MadMapper` show files to host the sensor controls, audio playback, and LED behavior, respectively. _Electric Forest_ runs on macOS systems. Show files exist in the “ELECTRIC FOREST SHOW FILES” folder on the Desktop.  
 
 - Max: `~/Desktop/ELECTRIC FOREST SHOW FILES/Max/ElectricForest_VINT_v6_ratioTEST-InactTEST-vSC_012025v2.maxpat`
-- Ableton: `~/Desktop/ELECTRIC FOREST SHOW FILES/Ableton/ElectricForest_v300_MultiShow_v2/ElectricForest_v300_Multishow_v2.als`
+- Ableton: `~/Desktop/ELECTRIC FOREST SHOW FILES/Ableton/Version 310/ElectricForest_v310.als`
 - MadMapper: `~/Desktop/ELECTRIC FOREST SHOW FILES/MadMapper/Version 3/ElectricForest_MultiShow_v3.mad`
 
 ### Standard Behavior  
@@ -241,18 +241,23 @@ The event list is as follows:
 | 02   | CC         | 15     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 15 color width | 0          | 127       | set color fill dynamic size     |
 | 02   | CC         | 16     | var    | IAC Driver Bus 1 | Ableton -> MadMapper | Tube 16 color width | 0          | 127       | set color fill dynamic size     |
 
-### Transport/Output Control (Audio Host)
+#### Transport/Output Control (Audio Host)
 
-| Chan | Message    | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                                    |
+| Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                                    |
 | ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------------------- |
 | 03   | CC         | 01     | 127    | IAC Driver Bus 1 | Transport         | Start               |            |           | emulate press of START button               |
 | 03   | CC         | 02     | 127    | IAC Driver Bus 1 | Transport         | Stop                |            |           | emulate press of STOP button                |
+| 03   | CC         | 03     | var    | IAC Driver Bus 1 | simple.fade_send  | fade IN time        | 200 ms     | 10 sec    | set fade IN time (variable)                 |
+| 03   | CC         | 03     | 0      | IAC Driver Bus 1 | simple.fade_send  | fade IN time        | 200 ms     | 10 sec    | set fade IN time to 200 ms                  |
+| 03   | CC         | 03     | 72     | IAC Driver Bus 1 | simple.fade_send  | fade IN time        | 200 ms     | 10 sec    | set fade IN time to 4 sec                   |
+| 03   | CC         | 04     | var    | IAC Driver Bus 1 | simple.fade_send  | fade OUT time       | 200 ms     | 10 sec    | set fade OUT time (variable)                |
+| 03   | CC         | 04     | 94     | IAC Driver Bus 1 | simple.fade_send  | fade OUT time       | 200 ms     | 10 sec    | set fade OUT time to 6 sec                  |
+| 03   | CC         | 05     | 1      | IAC Driver Bus 1 | simple.fade_send  | run FADE IN         | 200 ms     | 10 sec    | send FADE IN command to all receivers       |
+| 03   | CC         | 05     | 127    | IAC Driver Bus 1 | simple.fade_send  | run FADE OUT        | 200 ms     | 10 sec    | send FADE OUT command to all receivers      |
 | 03   | CC         | 20     | 127    | IAC Driver Bus 1 | A-North \| Mixer  | Track Volume        | -40 dB     | -2.5 dB   | set track fader level for Daytime mode      |
 | 03   | CC         | 20     | 127    | IAC Driver Bus 1 | B-South \| Mixer  | Track Volume        | -40 dB     | -2.5 dB   | set track fader level for Daytime mode      |
 | 03   | CC         | 20     | 79     | IAC Driver Bus 1 | A-North \| Mixer  | Track Volume        | -40 dB     | -2.5 dB   | set track fader level for Nighttime mode    |
 | 03   | CC         | 20     | 79     | IAC Driver Bus 1 | B-South \| Mixer  | Track Volume        | -40 dB     | -2.5 dB   | set track fader level for Nighttime mode    |
-| 03   | CC         | 3      | 1      | IAC Driver Bus 1 | zb.fade FADE IN   |                     | 0          | 127       | fade IN (ON) Audio and Routing track levels |
-| 03   | CC         | 3      | 127    | IAC Driver Bus 1 | zb.fade FADE OUT  |                     | 0          | 127       | fade OUT (OFF) Audio and Routing mix levels |
 
 ### Cue Control (Pixel Mapping)
 
@@ -496,3 +501,228 @@ _Note_: the Mac Mini running _Electric Forest_ utilizes a binary install of the 
 - ![#ea5670](https://placehold.co/32x32/cc000e/cc000e.png) `#cc000e - Background`
 
 - ![#fbd208](https://placehold.co/32x32/0000f2/0000f2.png) `#0000f2 - Foreground`
+
+## Appendix D – Clip Levels
+
+### Shaun Chasin "Movements"
+
+| Track    | Clip      | Clip Gain    |
+| -------- | --------- | ------------ |
+| 01       | Chasin 01 | +6 dB        |
+| 02       | Chasin 02 | +6 dB        |
+| 03       | Chasin 03 | +6 dB        |
+| 04       | Chasin 04 | +6 dB        |
+| 05       | Chasin 05 | +6 dB        |
+| 06       | Chasin 06 | +6 dB        |
+| 07       | Chasin 07 | +6 dB        |
+| 08       | Chasin 08 | +6 dB        |
+| 09       | Chasin 09 | +6 dB        |
+| 10       | Chasin 10 | +6 dB        |
+| 11       | Chasin 11 | +6 dB        |
+| 12       | Chasin 12 | +6 dB        |
+| 13       | Chasin 13 | +6 dB        |
+| 14       | Chasin 14 | +6 dB        |
+| 15       | Chasin 15 | +6 dB        |
+| 16       | Chasin 16 | +6 dB        |
+
+### Max Martin
+
+| Track    | Clip      | Clip Gain    |
+| -------- | --------- | ------------ |
+| 01       | Martin 01 | -3 dB        |
+| 02       | Martin 02 | -3 dB        |
+| 03       | Martin 03 | -3 dB        |
+| 04       | Martin 04 | -3 dB        |
+| 05       | Martin 05 | -2 dB        |
+| 06       | Martin 06 | -2 dB        |
+| 07       | Martin 07 | -2 dB        |
+| 08       | Martin 08 | -3 dB        |
+| 09       | Martin 09 | -2 dB        |
+| 10       | Martin 10 | -2 dB        |
+| 11       | Martin 11 | -2 dB        |
+| 12       | Martin 12 | -2 dB        |
+| 13       | Martin 13 | -2 dB        |
+| 14       | Martin 14 | -2 dB        |
+| 15       | Martin 15 | -2 dB        |
+| 16       | Martin 16 | -2 dB        |
+
+### John Carpenter
+
+Track 01 - "March of the Children"
+
+| Track    | Clip        | Clip Gain    |
+| -------- | ----------- | ------------ |
+| 01       | Children 01 | -1 dB        |
+| 02       | Children 02 | +1 dB        |
+| 03       | Children 03 | -1 dB        |
+| 04       | Children 04 | -1 dB        |
+| 05       | Children 05 | -1 dB        |
+| 06       | Children 06 | -1 dB        |
+| 07       | Children 07 | -1 dB        |
+| 08       | Children 08 |  +0 dB       |
+| 09       | Children 09 | -1 dB        |
+| 10       | Children 10 | -1 dB        |
+| 11       | Children 11 | +1 dB        |
+| 12       | Children 12 | -1 dB        |
+| 13       | Children 13 | -1 dB        |
+| 14       | Children 14 | -3 dB        |
+| 15       | Children 15 | -1 dB        |
+| 16       | Children 16 | -1 dB        |
+
+Track 02 - "Halloween Main Theme 2018"
+
+| Track    | Clip         | Clip Gain    |
+| -------- | ------------ | ------------ |
+| 01       | Halloween 01 | +10 dB       |
+| 02       | Halloween 02 | +12 dB       |
+| 03       | Halloween 03 | +4 dB        |
+| 04       | Halloween 04 | +7 dB        |
+| 05       | Halloween 05 | +4 dB        |
+| 06       | Halloween 06 | +7 dB        |
+| 07       | Halloween 07 | +4 dB        |
+| 08       | Halloween 08 | +4 dB        |
+| 09       | Halloween 09 | +5 dB        |
+| 10       | Halloween 10 | +4 dB        |
+| 11       | Halloween 11 | +4 dB        |
+| 12       | Halloween 12 | +7 dB        |
+| 13       | Halloween 13 | +1 dB        |
+| 14       | Halloween 14 | +9 dB        |
+| 15       | Halloween 15 | +0 dB        |
+| 16       | Halloween 16 | +9 dB        |
+
+Track 03 - "Prince of Darkness Main Theme"
+
+| Track    | Clip        | Clip Gain    |
+| -------- | ----------- | ------------ |
+| 01       | Darkness 01 | +6 dB        |
+| 02       | Darkness 02 | +6 dB        |
+| 03       | Darkness 03 | +6 dB        |
+| 04       | Darkness 04 | +6 dB        |
+| 05       | Darkness 05 | +6 dB        |
+| 06       | Darkness 06 | +6 dB        |
+| 07       | Darkness 07 | +6 dB        |
+| 08       | Darkness 08 | +6 dB        |
+| 09       | Darkness 09 | +4 dB        |
+| 10       | Darkness 10 | +6 dB        |
+| 11       | Darkness 11 | +6 dB        |
+| 12       | Darkness 12 | +8 dB        |
+| 13       | Darkness 13 | +6 dB        |
+| 14       | Darkness 14 | +6 dB        |
+| 15       | Darkness 15 | +6 dB        |
+| 16       | Darkness 16 | +6 dB        |
+
+Track 04 - "The Shape Hunts Allyson"
+
+| Track    | Clip     | Clip Gain    |
+| -------- | -------- | ------------ |
+| 01       | Shape 01 | +4 dB        |
+| 02       | Shape 02 | +6 dB        |
+| 03       | Shape 03 | +6 dB        |
+| 04       | Shape 04 | +6 dB        |
+| 05       | Shape 05 | +7 dB        |
+| 06       | Shape 06 | +7 dB        |
+| 07       | Shape 07 | +6 dB        |
+| 08       | Shape 08 | +7 dB        |
+| 09       | Shape 09 | +5 dB        |
+| 10       | Shape 10 | +6 dB        |
+| 11       | Shape 11 | +8 dB        |
+| 12       | Shape 12 | +6 dB        |
+| 13       | Shape 13 | +3 dB        |
+| 14       | Shape 14 | +8 dB        |
+| 15       | Shape 15 | +4 dB        |
+| 16       | Shape 16 | +7 dB        |
+
+Track 05 - "Christine Main Theme"
+
+| Track    | Clip         | Clip Gain    |
+| -------- | ------------ | ------------ |
+| 01       | Christine 01 | +2 dB        |
+| 02       | Christine 02 | +2 dB        |
+| 03       | Christine 03 | +5 dB        |
+| 04       | Christine 04 | +3 dB        |
+| 05       | Christine 05 | +3 dB        |
+| 06       | Christine 06 | +4 dB        |
+| 07       | Christine 07 | +3 dB        |
+| 08       | Christine 08 | +2 dB        |
+| 09       | Christine 09 | +3 dB        |
+| 10       | Christine 10 | +1 dB        |
+| 11       | Christine 11 | +2 dB        |
+| 12       | Christine 12 | +2 dB        |
+| 13       | Christine 13 | +2 dB        |
+| 14       | Christine 14 | +6 dB        |
+| 15       | Christine 15 | +5 dB        |
+| 16       | Christine 16 | +6 dB        |
+
+Track 06 - "The Fog Main Theme"
+
+| Track    | Clip      | Clip Gain    |
+| -------- | --------- | ------------ |
+| 01       | TheFog 01 | +4 dB        |
+| 02       | TheFog 02 | +4 dB        |
+| 03       | TheFog 03 | +4 dB        |
+| 04       | TheFog 04 | +3 dB        |
+| 05       | TheFog 05 | +3 dB        |
+| 06       | TheFog 06 | +3 dB        |
+| 07       | TheFog 07 | +4 dB        |
+| 08       | TheFog 08 | +3 dB        |
+| 09       | TheFog 09 | +3 dB        |
+| 10       | TheFog 10 | +3 dB        |
+| 11       | TheFog 11 | +3 dB        |
+| 12       | TheFog 12 | +3 dB        |
+| 13       | TheFog 13 | +3 dB        |
+| 14       | TheFog 14 | +2 dB        |
+| 15       | TheFog 15 | +3 dB        |
+| 16       | TheFog 16 | +3 dB        |
+
+Track 07 - "Weeping Ghost"
+
+| Track    | Clip     | Clip Gain    |
+| -------- | -------- | ------------ |
+| 01       | Ghost 01 | +3 dB        |
+| 02       | Ghost 02 | +3 dB        |
+| 03       | Ghost 03 | +3 dB        |
+| 04       | Ghost 04 | +2 dB        |
+| 05       | Ghost 05 | +2 dB        |
+| 06       | Ghost 06 | +2 dB        |
+| 07       | Ghost 07 | +3 dB        |
+| 08       | Ghost 08 | +2 dB        |
+| 09       | Ghost 09 | +0 dB        |
+| 10       | Ghost 10 | +2 dB        |
+| 11       | Ghost 11 | +2 dB        |
+| 12       | Ghost 12 | +2 dB        |
+| 13       | Ghost 13 | +2 dB        |
+| 14       | Ghost 14 | +2 dB        |
+| 15       | Ghost 15 | +3 dB        |
+| 16       | Ghost 16 | +3 dB        |
+
+## Appendix E - Change Log
+
+<!-- Run the 'Make Change Log' action to use this template. A 'log' directory will be created if necessary.-->
+
+<!-- Use semantic versioning (X.Y.Z):
+Given a version number MAJOR.MINOR.PATCH, increment the:
+1. MAJOR version release with incompatible API changes
+2. MINOR version releasing adding functionality in a backward compatible manner
+3. PATCH version releasing backward compatible bug fixes
+Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format, e.g.. "2.6.0-alpha"
+
+ALL builds start at __version 0.1.0__  
+Initial production release = __1.0.0__ -->
+
+### Interactive: Electric Forest (Ableton Live set)
+
+- Host machine make/model: Mac Mini M2  
+- OS version: macOS 15  
+- Primary application version: Ableton Live Suite 12.2.5
+- Primary application file version: "ElectricForest_v310.als"
+
+### Version [3.1.0] - 10/08/2025
+
+__Fixed:__
+
+__Changed:__
+
+__Added:__
+
+- add "simple.fade_send.amxd" and "simple.fade_receive.amxd" devices to Audio and Routing tracks for Fade In/Out control
+- add Power Manager events for on-demand FADE OUT (4 seconds) and FADE IN (6 seconds)
