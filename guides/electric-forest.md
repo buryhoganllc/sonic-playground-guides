@@ -42,7 +42,7 @@ Allow each application to fully load before launching the next file. Once that i
 
 ### Scene Changes (Light and Sound cues)
 
-***As of 10/01/25,***___*** *Electric Forest* is programmed perform the John Carpenter mix during open hours, and the Shaun Chasin mix during closed hours.
+***As of 10/01/25,*** *Electric Forest* is programmed perform the John Carpenter mix during open hours, and the Shaun Chasin mix during closed hours.
 
 Through `Power Manager` events, the Carpenter set will be triggered at 11AM SUNDAY-FRIDAY, and at 10AM SATURDAY.
 
