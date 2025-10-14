@@ -16,7 +16,7 @@ Please read this guide in its entirety before making changes to the *Electric Fo
 
 *Electric Forest* utilizes `Max`, `Ableton`, and `MadMapper` show files to host the sensor controls, audio playback, and LED behavior, respectively. *Electric Forest* runs on macOS systems. Show files exist in the “ELECTRIC FOREST SHOW FILES” folder on the Desktop.
 
-- Max: `~/Desktop/ELECTRIC FOREST SHOW FILES/Max/ElectricForest_VINT_v6_ratioTEST-InactTEST-vSC_012025v2.maxpat`
+- Max: `~/Desktop/ELECTRIC FOREST SHOW FILES/Max/ElectricForest_MAX.maxpat`
 - Ableton: `~/Desktop/ELECTRIC FOREST SHOW FILES/Ableton/Version 310/ElectricForest_v310.als`
 - MadMapper: `~/Desktop/ELECTRIC FOREST SHOW FILES/MadMapper/Version 3/ElectricForest_MultiShow_v3.mad`
 
@@ -119,9 +119,9 @@ To accomplish this:
 
 - Open Safari on the Mac Mini
 - Click the `Advatek Controller 1` bookmark from the bookmark bar to open the web interface for pixel controller 1 (tubes 1 through 8)
-- Click the ADMINISTRATOR button
+- Click the `ADMINISTRATOR` button
 - Once the control page has loaded, click Pixel Outputs
-- Locate the INTENSITY controls in the upper right corner.
+- Locate the `INTENSITY` controls in the upper right corner.
 - You can manually enter a value between 0 (off) and 255 (full) or use the slider. An intensity of 30% has proved useful for video shoots.
 - Repeat these steps for controller 2 (tubes 9 through 16.) Locate the bookmark in the bookmark bar.
 - When your event is complete, be sure to **RESTORE** the intensity to **FULL (100%)** for both controllers.
@@ -132,13 +132,13 @@ All tubes have a background (static) and foreground (active) color which creates
 
 - Create a new Scene in the `MadMapper` file. Set your desired transition time and fade shape.
 - Navigate to the list of Tubes on the left and scroll down to select Tube 01.
-- Navigate to the right to the shaders/effects list and locate “Fill,” which corresponds to Tube 01. Use the map on the inside of the closet door to identify where Tube 01 is located in physical space. You will also notice a “Fill-1,” Fill-2,” etc. Each tube has a pixel effect assigned to it, which under normal conditions are all the same.
+- Navigate to the right to the shaders/effects list and locate `Fill`, which corresponds to Tube 01. Use the map on the inside of the closet door to identify where Tube 01 is located in physical space. You will also notice a `Fill-1`, `Fill-2`, etc. Each tube has a pixel effect assigned to it, which under normal conditions are all the same.
   - The title of the effect is offset -1 for each tube, so Tube 02 is Fill-1; Tube 10 is Fill-9; Tube 16 is Fill-15, etc.
-- In the lower right area, you have the effects parameters for “Fill.” Locate the entries for Front Color and Back Color, which are represented by colored rectangles. Back Color is the static color that is always present. Front Color is the dynamic color that follows the peak level of the corresponding audio track.
+- In the lower right area, you have the effects parameters for `Fill`. Locate the entries for Front Color and Back Color, which are represented by colored rectangles. Back Color is the static color that is always present. Front Color is the dynamic color that follows the peak level of the corresponding audio track.
 - You can change either color setting by clicking the colored rectangle to reveal and change the hex code, by selecting one of the pre-defined colors, by using the color wheel, or by using the RGB value sliders.
   - *Note: because of the semi-opaque nature of the plexiglass tubes, very deep saturated colors that do not use the white channel in the pixels tend not to look that great. High contrast, bright colors read better. You will notice this right away if you dial up a deep purple or forest green.*
-- Once you have found your new colors, right click on “Fill” and select “Copy All Settings.”
-- Right click on “Fill-1” and select “Paste Settings.”
+- Once you have found your new colors, right click on `Fill` and select `Copy All Settings`.
+- Right click on `Fill-1` and select `Paste Settings`.
 - Repeat these steps for the remaining “Fill-…” entries. Return to the Scenes/Cues list, right click on your newly created scene and select Update Scene.
 - Enable Live mode to allow for single-click scene recall.
 
@@ -146,22 +146,71 @@ All tubes have a background (static) and foreground (active) color which creates
 
 ### Electric Forest sensors are not registering movement
 
-Conduct a full power cycle of the system:
+#### 1. Check that the sensor objects are enabled in Max
+
+- Navigate to the Max window
+- Look for movement in the two light blue fader objects in each group of channels
+  - If you do not see movement, press the blue `STOP` button at the top of the patch.
+  - Press the blue `START` button to re-enable network discovery and check for activity
+- If these steps are unsuccessful, proceed to:
+  
+#### 2. Verify that the Phidget Network Server is active
+
+- Launch Phidget Control Panel from the Dock (or `/Applications`)
+- Navigate to the `Network Server` tab
+- Look for a button that says `Stop Network Server` - this means the network server is *running*
+  - If the button says `Start Network Server`, click it to *start* the server
+- Return to Max and repeat step 1 above
+- If these steps are unsuccessful, proceed to:
+
+#### 3. Verify network privileges
+
+- Launch System Settings
+- Click `Privacy & Security`
+- Scroll in the resulting window to `Local Network`
+- Verify that all entries for `Max` are switched **ON**
+- Return to `Max` and repeat step 1 above
+- If these steps are unsuccessful, proceed to:
+  
+#### 4. Power cycle the sensing system
+
+- Quit `Max`, `Ableton`, and `MadMapper` ***WITHOUT SAVING***
+- Shutdown the Mac Mini
+- Turn off the `PIXEL POWER` Furman conditioner (the upper unit with red labels)
+- Flip power to breakers `23` and `24` in the electrical/data room behind the Davis Theatre - the breakers are labeled `MOOD LIGHTS`. Wait 10 seconds. Restore breaker power.
+- Restore power to the `PIXEL POWER` Furman conditioner. Wait for the TP-Link network switch to fully boot.
+  - Look for eighteen (18) green activity lights on the left side of the switch face - 16 sensor hubs; two Advatek pixel controllers.
+- Boot the Mac Mini. You will see a nineteenth green activity light appear on the switch.
+- Launch `Max` from the desktop alias (`1 - MAX`) and check for activity.
+- If successful, launch `Ableton` and `MadMapper` from their respective desktop aliases.
+- Open `Power Manager` and perform the appropriate events for the time of day - `Daytime` vs `Nighttime` mode; select the appropriate playlist; etc.
+
+### Conducting a full system power cycle
+
+#### Cutting power
+
+At times it may be necessary to turn off the *Electric Forest* for maintenance, or in the event of a building or campus power outage.
 
 - Quit `MadMapper`, `Ableton` and `Max`. **DO NOT** save.
 - Shut down the Mac Mini.
-- Turn off PIXEL POWER Furman (red) and AUDIO POWER Furman (yellow).
-- Wait three (3) minutes
-- Restore PIXEL POWER Furman. Wait for a full boot of the Furman and for the line voltage to be displayed.
-- Restore AUDIO POWER Furman. Wait for a full boot of the Furman and for the line voltage to be displayed.
-- Wait for the pixel system switch (TP-Link) to fully boot.
-- Turn on the Mac Mini (power button located at rear right - reach through the right side of the rack to access it.)
+- Turn off the `PIXEL POWER` Furman conditioner (red) and `AUDIO POWER` Furman conditioner (yellow).
+- Turn off breakers for circuits `23` and `24` in the electrical/data room behind the Davis Theatre - the breakers are labeled `MOOD LIGHTS`
+  - *the Electric Forest systems can remain in this off state if necessary*
+
+#### Restoring power
+
+- *If restoring from a temporary or maintenance outage, wait three minutes before restoring system power*
+- Restore breaker power to circuits `23` and `24`
+- Restore `PIXEL POWER` Furman. Wait for a full boot of the Furman and for the line voltage to be displayed.
+- Restore `AUDIO POWER` Furman. Wait for a full boot of the Furman and for the line voltage to be displayed.
+- Wait for the pixel system switch (TP-Link) to fully boot. The system is ready when you see eighteen (18) green activity lights on the left side of the switch face.
+- Turn on the Mac Mini
 - Once fully booted to the desktop, launch the application components from their Desktop aliases. The aliases are named to reflect the order in which they are run:
   - 1 - MAX
   - 2 - ABLETON
   - 3 - MADMAPPER
 - **Allow each application to fully boot before moving on to the next one.**
-- Lastly, begin playback in Ableton by running one of the `Power Manager` events (`Ableton-Shaun Chasin` for example) to begin audio playback and set the tube lighting into the desired configuration.
+- Open `Power Manager` and perform the appropriate events for the time of day - `Daytime` vs `Nighttime` mode; select the appropriate playlist; etc.
 
 ### One or more loudspeakers do not appear to be working
 
