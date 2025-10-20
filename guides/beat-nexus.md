@@ -14,9 +14,9 @@ Please read this guide in its entirety before making changes to _Beat Nexus._
 
 ## Basics
 
-`Beat Nexus` is working properly when the "brightly lit" zones on all four (4) sides of the device trigger sounds that can be heard on any of the headphones. Note that there are also "dimly lit" zones that do __NOT__ trigger sounds, but only _modify_ other sounds. The four (4) triangles on the center "visualizer" will animate in response to sounds being played on that respective side of the device. The large `UP`/`DOWN` arrow buttons on the right side of each bay control volume for the two (2) pairs of headphones connected to that side of the device.
+`Beat Nexus` is working properly when the "brightly lit" zones on all four (4) control-consoles of the device trigger sounds that can be heard on any of the headphones. Note that there are also "dimly lit" zones that do __NOT__ trigger sounds, but only _modify_ other sounds. The four (4) triangles on the center "visualizer" will animate in response to sounds being played on that respective side of the device. The large `UP`/`DOWN` arrow buttons on the right side of each console will control volume for the two (2) pairs of headphones connected to that side of the device.
 
-Each individual side of `Beat Nexus` will "time out" after a set number of seconds when it is not being played. When a side reaches its time-out, its volume will return to a default level, and it will start a simple attract-animation with its lights. When all four (4) sides are in their time-out state, the center visualizer will also begin an attract-animation.
+Each individual console of `Beat Nexus` will "time out" after a set number of seconds when it is not being played. When a conle reaches its time-out, its volume will return to a default level, and it will start a simple attract-animation with its lights. When all four (4) consoles are in their time-out state, the center visualizer will also begin an attract-animation.
 
 `Beat Nexus` runs on a Mac Mini, running one (1) piece of software: `Ableton Live 12 Suite`. There are four (4) touch-controllers connected to the computer by USB cables. Most issues can be solved by:
 
@@ -35,8 +35,8 @@ The center-case of `Beat Nexus` contains the computer, audio interface, and othe
 ### Accessing Internal Components
 
 1. Remove (as many as eight) Phillips-head screws from underneath the white part of the case.
-2. Life the top part of the case straight up and carefully set it aside.
-3. There is a large white panel covered in electronics that must be partially disconnected and moved aside in order to access the internals below it. Note that the multicolored wires coming from this panel are short and ___CANNOT___ be disconnected. Disconnect only the "barrel" type power connected on this panel. Slightly lift this panel, rotate it around the point where the multicolored cables connect to it, and set it partly aside to access the internals.
+2. Lift the top part of the case straight up and carefully set it aside.
+3. Find is a large, square, white panel covered in electronics that must be partially disconnected and moved aside in order to access the internals below it. Note that the multicolored wires coming from this panel are short and ___CANNOT___ be disconnected. Disconnect only the "barrel" type power connected on this panel. Slightly lift this panel, rotate it around the point where the multicolored cables connect to it, and set it partly aside to access the internals.
 
 ### System Components
 
@@ -45,7 +45,7 @@ The internal components in the center-case are:
 - Mac Mini
 - Audio interface
 - Headphone amplifiers (x2)
-- Keyboard, mouse and monitor
+- Keyboard, mouse, and monitor
 - USB switches with remote-controls for disconnecting and reconnecting `Erae` touch-controllers (x2)
 - Power switches with remote-controls for disconnecting and reconnecting `Erae` touch-controllers (x4)
 - Power splitters
@@ -57,7 +57,7 @@ The Mac Mini has a small power button on the rear. The computer is set to automa
 
 ### Control Surfaces
 
-The side-cases of Beat Nexus house an `Erae` touch-controller and two (2) triangular arcade buttons.
+The four (4) control-consoles of Beat Nexus house an `Erae` touch-controller and two (2) triangular arcade buttons.
 
 ![Harmony station.]({{ '/assets/images/BN_Harmony.jpeg' | relative_url }})
 
@@ -87,7 +87,6 @@ Opening the case:
 The Mac Mini system settings for `Login Items & Extensions` are instructed to `Open at Login` the application `Ableton_autostart.app`. This application was created with `Automator` and performs the following tasks at launch:
 
 - Deletes a list of files which `Ableton Live` uses to detect crashes and save undo histories (both of which hinder the software from running smoothly in this permanent installation)
-- Deletes audio recordings created by previous users of the activity
 - Empties the `Trash`
 - Opens the appropriate `Ableton Live` document to start the activity.
 
