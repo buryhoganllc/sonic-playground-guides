@@ -26,7 +26,7 @@ The functioning of the microphones, headphones, and most controls on the console
 
 1. Put on headphones connected to `VOCAL EFFECTS A`
 2. Set up the microphone connected to `VOCAL EFFECTS A` so that you can speak into it while manipulating the buttons on the left side of the console.
-3. Press the `START OVER` button to be sure you are at the activity's splash-screen.
+3. Press the `START OVER` button to be sure you are at the activity's `YOU CAN SING` splash-screen.
 4. Sing into the microphone while pressing the joystick in one of the four (4) directions - up, down, left, or right. You should hear your voice in the headphones and it should be transformed. Repeat for each direction on the joystick.
 5. Sing into the microphone while pressing one of the four (4) effect buttons on the right of the joystick - `ECHO`, `AUTO-TUNE`, `REVERB`, `SYNTH`. You should hear your voice in the headphones and it should be transformed. Repeat for each of the other effect buttons.
 6. Press and release the `VOLUME UP` button and check to see if the microphone sounds louder in your headphones.
