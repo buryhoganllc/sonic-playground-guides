@@ -18,8 +18,8 @@ Music for Film & TV, Music for Video Games, Voice Acting
 
 ### Vocal Booth
 
-- [Intuiface Systems Operating Guide]({{ site.baseurl }}/vocal-booth/)
+- [Vocal Booth Operating Guide]({{ site.baseurl }}/vocal-booth/)
 
 ### Beat Nexus
 
-- [Intuiface Systems Operating Guide]({{ site.baseurl }}/beat-nexus/)
+- [Beat Nexus Operating Guide]({{ site.baseurl }}/beat-nexus/)
