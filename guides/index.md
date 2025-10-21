@@ -15,3 +15,11 @@ permalink: /guides/
 Music for Film & TV, Music for Video Games, Voice Acting
 
 - [Intuiface Systems Operating Guide]({{ site.baseurl }}/intuiface/)
+
+### Vocal Booth
+
+- [Intuiface Systems Operating Guide]({{ site.baseurl }}/vocal-booth/)
+
+### Beat Nexus
+
+- [Intuiface Systems Operating Guide]({{ site.baseurl }}/beat-nexus/)
