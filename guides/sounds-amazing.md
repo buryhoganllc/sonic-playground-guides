@@ -196,9 +196,9 @@ Each of the two (2) `RANE Twelve` turntable controllers must be assigned to a de
 
 You will see four (4) numbered lights flashing on each of the turntables. We have drilled small holes in the plexiglass covering the turntable controls sot that you can access these buttons.
 
-<img src="{{ '/assets/images/SA_turnTable_Left.png' | relative_url }}" alt="Left Deck - Setting Deck Number.">
+<img src="{{ '/assets/images/SA_turnTable_Left.jpg' | relative_url }}" alt="Left Deck - Setting Deck Number.">
 
-<img src="{{ '/assets/images/SA_turnTable_Right.png' | relative_url }}" alt="Right Deck - Setting Deck Number.">
+<img src="{{ '/assets/images/SA_turnTable_Right.jpg' | relative_url }}" alt="Right Deck - Setting Deck Number.">
 
 #### Mixer
 
