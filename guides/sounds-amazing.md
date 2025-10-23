@@ -122,6 +122,8 @@ The lights go through a startup sequence. If you reboot the Mac Mini, you should
 
 <img src="{{ '/assets/images/SA_OpenDeckLights.png' | relative_url }}" alt="OpenDeck Lights." height="700">
 
+---
+
 ## Activity Specific Settings
 
 ### DRUM MACHINE
@@ -133,6 +135,8 @@ Having the **Ptrn Select** button engaged - located on the left side - while not
 **NOTE** - these button selections are retained after a power cycle of the drum machine instrument. If you must remove the instrument from the enclosure, verify that the buttons are in their correct state once the device is re-installed.
 
 <img src="{{ '/assets/images/SA_DrumMachineRolandTR8S.png' | relative_url }}" alt="Roland TR-8S Drum Machine." height="700">
+
+---
 
 ### RAP/FREESTYLE
 
@@ -160,6 +164,8 @@ If audio plays from the *Big Les* videos but **NOT* from the *Big Tig* videos, t
 - Select `OUTPUTS` and verify that the `Rubix` is selected as the destination device.
 - Check the Mac Mini's audio settings. Go to `System Settings>Sound>Output` and select `Rubix.`
 
+---
+
 ### SAMPLING
 
 The sampling activity uses `Cubase Pro` to house the `Kontakt` banks - the three (3) content containers for the activity. These banks in `Kontakt` and the settings in `Cubase` should not be changed or updated in any way.
@@ -178,6 +184,8 @@ If the keyboard does not illuminate, the most likely issue is that the USB cable
 
 The `Lumi` keyboards have a setting added to them to show the specific colors required for the activity. If one of the keyboards fails and must be replaced, the replacement keyboard will first need to be configured. Please contact `Sounds Amazing` for assistance.
 
+---
+
 ### TURNTABLE
 
 The turntables have their own setup requirements after a power cycle.
@@ -195,6 +203,8 @@ You will see four (4) numbered lights flashing on each of the turntables. We hav
 #### Mixer
 
 If the mixer goes to sleep, it will also require a power cycle. Open the drawer beneath the turntables, unplug the mixer power and then restore power to restart the device.
+
+---
 
 ### LOOP STATION
 
