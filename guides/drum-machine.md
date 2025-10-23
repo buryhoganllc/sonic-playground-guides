@@ -4,7 +4,7 @@ layout: default
 permalink: /drum-machine/
 ---
 
-![Sounds Amazing.]({{ '/assets/images/SA_SoundsAmazingLogo.png' | relative_url }})
+![Sounds Amazing.]({{ '/assets/images/SA_SoundsAmazingLogo.png' | height=200 | relative_url }})
 
 ## Sonic Playground Interactive Exhibit
 
