@@ -30,13 +30,13 @@ Each activity - with the exception of *Loop Station* - has an `OpenDeck` control
 
 To make these systems easy to troubleshoot and install, we have added breakout terminal blocks for all of the necessary connectivity. Each ribbon cable has sixteen (16) connections, which facilitate eight (8) contact closures from the `HAPP` buttons on the user interface, **OR** eight (8) LED lights within each button.
 
-![OpenDeck Controller Board.]({{ '/assets/images/SA_OpenDeck.png' | relative_url }})
+![OpenDeck Controller Board.]({{ '/assets/images/SA_OpenDeck.png' | height=700 | relative_url }})
 
 The terminal blocks are set up in two pairs. Two of the terminal blocks provide connectivity to the contract closures (button *push*), while the other two provide connectivity to the LED lights inside of each button.
 
 **NOTE** - the standard bulbs in the `HAPP` buttons have been replaced with 5V LED lights to ensure long life. If there is a light not working, it's most likely the wiring, not the bulb itself.
 
-![Terminal Blocks.]({{ '/assets/images/SA_TerminalBlocks.png' | relative_url }})
+![Terminal Blocks.]({{ '/assets/images/SA_TerminalBlocks.png' | height=700 | relative_url }})
 
 ### Open Deck Configurator
 
@@ -44,7 +44,7 @@ Each `OpenDeck` board is connected to the Mac Mini via USB cable. Every Mac Mini
 
 Opening the application will present the following window:
 
-![OpenDeck Configurator.]({{ '/assets/images/SA_OpenDeckConfigurator.png' | relative_url }})
+![OpenDeck Configurator.]({{ '/assets/images/SA_OpenDeckConfigurator.png' | height=700 | relative_url }})
 
 Click once on the `Button` icon to check the contact closures within the buttons.
 
@@ -54,7 +54,7 @@ Use this to verify that the `HAPP` buttons are activating the `OpenDeck` board. 
 
 Pressing any button will show activity on the associated cell in the `Button` view. If the onscreen button cell does not illuminate, it could be *below* the initial view of the application window. You may need to scroll down to display higher cell numbers. The button numbers associated with each activity are represented in the table in the following section.
 
-![OpenDeck Buttons.]({{ '/assets/images/SA_OpenDeckButtons.png' | relative_url }})
+![OpenDeck Buttons.]({{ '/assets/images/SA_OpenDeckButtons.png' | height=700 | relative_url }})
 
 #### Button Lights
 
@@ -78,7 +78,7 @@ To check the lights inside of the buttons, click on the `LED` tab, then select a
 
 The lights go through a startup sequence. If you reboot the Mac Mini, you should see each button briefly illuminate.
 
-![OpenDeck Lights.]({{ '/assets/images/SA_OpenDeckLights.png' | relative_url }})
+![OpenDeck Lights.]({{ '/assets/images/SA_OpenDeckLights.png' | height=700 | relative_url }})
 
 ## Activity Specific Settings
 
@@ -88,4 +88,4 @@ Having the **Ptrn Select** button engaged - located on the left side - while not
 
 **NOTE** - these button selections are retained after a power cycle of the drum machine instrument. If you must remove the instrument from the enclosure, verify that the buttons are in their correct state once the device is re-installed.
 
-![Roland TR-8S.]({{ '/assets/images/SA_DrumMachineRolandTR8S.png' | relative_url }})
+![Roland TR-8S.]({{ '/assets/images/SA_DrumMachineRolandTR8S.png' | height=700 | relative_url }})
