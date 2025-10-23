@@ -5,9 +5,7 @@ permalink: /sounds-amazing/
 ---
 <img src="{{ '/assets/images/SA_SoundsAmazingLogo.png' | relative_url }}" alt="OpenDeck Controller Board." height="200">
 
-## Sonic Playground Interactive Exhibit
-
-### DRUM MACHINE - Information and Troubleshooting Guide
+## Sonic Playground Interactive Exhibit - Information and Troubleshooting Guide
 
 *Sounds Amazing* has designed five (5) unique activities for *Sonic Playground.* The hardware and technology is nearly identical across four (4) of these five activities, the exception being the wall-mounted *Loop Station* featuring three (3) Apple iPad stations.
 
@@ -59,7 +57,7 @@ Pressing any button will show activity on the associated cell in the `Button` vi
 
 #### Button Lights
 
-To check the lights inside of the buttons, click on the `LED` tab, then select a button/connection to test. Refer to the following table for a list of which LEDs on the `OpenDeck` board associated with each activity.
+To check the lights inside of the buttons, click on the `LED` tab, then select a button/connection to test. Refer to the following tables for a list of which LEDs on the `OpenDeck` board associated with each activity.
 
 #### Button I/O for DRUM MACHINE
 
