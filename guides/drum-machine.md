@@ -82,7 +82,7 @@ The lights go through a startup sequence. If you reboot the Mac Mini, you should
 
 ## Activity Specific Settings
 
-The drum machine instrument in the activity requires that two (2) buttons be engaged: in the lower left panel there are eight (8) buttons that allow the use to have eight (8) variations of each pattern. In this activity, we are only utilizing the **A** variation. The **A** button bust be illuminated as shown below.
+The drum machine instrument in the activity requires that two (2) buttons be engaged: in the lower left panel there are eight (8) buttons that allow the use to have eight (8) variations of each pattern. In this activity, we are only utilizing the **A** variation. The **A** button must be illuminated as shown below.
 
 Having the **Ptrn Select** button engaged - located on the left side - while not mandatory for the user experience, allows you to verify that the Program Changes are reaching the `Roland TR-8S` drum machine. It is recommended that this button be engaged to verify proper operation.
 
