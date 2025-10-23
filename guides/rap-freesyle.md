@@ -1,7 +1,7 @@
 ---
 title: Rap-Freestyle Operating Guide
 layout: default
-permalink: /sampling/
+permalink: /rap-freestyle/
 ---
 
 ## Sonic Playground Interactive Exhibit
